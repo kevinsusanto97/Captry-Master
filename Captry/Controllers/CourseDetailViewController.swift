@@ -17,11 +17,8 @@ class CourseDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        overviewContent.lineBreakMode = .byWordWrapping
-        overviewContent.numberOfLines = 0
         
     }
-    
 
     /*
     // MARK: - Navigation
