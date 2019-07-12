@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wGG-Vb-V1u">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -155,20 +155,48 @@
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Course Detail View Controller-->
         <scene sceneID="6Xu-1j-wJ0">
             <objects>
-                <viewController id="wGG-Vb-V1u" sceneMemberID="viewController">
+                <viewController id="wGG-Vb-V1u" customClass="CourseDetailViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TYh-Ap-Pvj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXX-iv-BQu">
+                                <rect key="frame" x="26" y="109" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="In this course you will learn about how to place some object into grids. Rule of third is a popular composition technique…" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAj-77-9n1">
+                                <rect key="frame" x="26" y="146" width="362" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="362" id="1mi-Av-qsk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MAj-77-9n1" firstAttribute="leading" secondItem="npQ-DR-Ly2" secondAttribute="leading" constant="26" id="MDy-AN-D8d"/>
+                            <constraint firstItem="MAj-77-9n1" firstAttribute="leading" secondItem="npQ-DR-Ly2" secondAttribute="leading" constant="26" id="WTU-HW-QeU"/>
+                            <constraint firstItem="XXX-iv-BQu" firstAttribute="leading" secondItem="npQ-DR-Ly2" secondAttribute="leading" constant="26" id="Wy7-Jf-XKl"/>
+                            <constraint firstItem="XXX-iv-BQu" firstAttribute="top" secondItem="npQ-DR-Ly2" secondAttribute="top" constant="65" id="f2W-tP-ZeT"/>
+                            <constraint firstItem="MAj-77-9n1" firstAttribute="top" secondItem="npQ-DR-Ly2" secondAttribute="top" constant="102" id="vo9-cZ-FF2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="npQ-DR-Ly2"/>
                     </view>
+                    <connections>
+                        <outlet property="overviewContent" destination="MAj-77-9n1" id="SYC-OR-qoT"/>
+                        <outlet property="overviewLabel" destination="XXX-iv-BQu" id="tNT-Xn-xgm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7a5-hb-SSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113" y="-1203"/>
+            <point key="canvasLocation" x="1021.7391304347827" y="-964.28571428571422"/>
         </scene>
     </scenes>
     <resources>
