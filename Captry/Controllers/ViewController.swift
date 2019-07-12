@@ -14,8 +14,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    @IBAction func CourseTappedAction(_ sender: Any) {
+        performSegue(withIdentifier: "courseDetail", sender: nil)
+    }
 
 }
 

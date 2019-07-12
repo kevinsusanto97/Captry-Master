@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wGG-Vb-V1u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hrh-7f-gpF">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="WKQ-7w-Jv8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="WKQ-7w-Jv8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="1200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTg-jc-2Bn">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
@@ -61,6 +61,10 @@
                                                         <accessibility key="accessibilityConfiguration" label="Rule of Thirds">
                                                             <bool key="isElement" value="YES"/>
                                                         </accessibility>
+                                                        <gestureRecognizers/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="ZDj-cn-B4V" appends="YES" id="IlG-7G-F02"/>
+                                                        </connections>
                                                     </view>
                                                     <view contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ht-uD-pwK" customClass="courseListStyle" customModule="Captry">
                                                         <rect key="frame" x="0.0" y="256" width="347" height="231"/>
@@ -149,54 +153,108 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="e69-RA-Det"/>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <segue destination="Dfj-Ca-i5p" kind="show" identifier="courseDetail" id="VfS-9I-9OI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ZDj-cn-B4V">
+                    <connections>
+                        <action selector="CourseTappedAction:" destination="BYZ-38-t0r" id="Rmy-Td-boI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+            <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
         </scene>
         <!--Course Detail View Controller-->
-        <scene sceneID="6Xu-1j-wJ0">
+        <scene sceneID="g6N-Jf-fND">
             <objects>
-                <viewController id="wGG-Vb-V1u" customClass="CourseDetailViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TYh-Ap-Pvj">
+                <viewController id="Dfj-Ca-i5p" customClass="CourseDetailViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fsc-Az-JPQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXX-iv-BQu">
-                                <rect key="frame" x="26" y="109" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="In this course you will learn about how to place some object into grids. Rule of third is a popular composition technique…" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAj-77-9n1">
-                                <rect key="frame" x="26" y="146" width="362" height="60"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OI9-u8-jBz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMe-mV-QmA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tutorial Video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W49-hr-eio">
+                                                <rect key="frame" x="26" y="150" width="114" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VM-fm-ECK">
+                                                <rect key="frame" x="26" y="26" width="77" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In this course you will learn about how to place some object into grids. Rule of third is a popular composition technique…" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCi-Ln-x1X">
+                                                <rect key="frame" x="26" y="56" width="362" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="4u8-OD-SJO"/>
+                                            <constraint firstItem="KCi-Ln-x1X" firstAttribute="leading" secondItem="ZMe-mV-QmA" secondAttribute="leading" constant="26" id="N2X-Oh-tBd"/>
+                                            <constraint firstAttribute="trailing" secondItem="KCi-Ln-x1X" secondAttribute="trailing" constant="26" id="U8H-tb-dVO"/>
+                                            <constraint firstItem="KCi-Ln-x1X" firstAttribute="top" secondItem="5VM-fm-ECK" secondAttribute="bottom" constant="9" id="VxZ-PU-93v"/>
+                                            <constraint firstItem="5VM-fm-ECK" firstAttribute="top" secondItem="ZMe-mV-QmA" secondAttribute="top" constant="26" id="iNz-UQ-qRj"/>
+                                            <constraint firstItem="5VM-fm-ECK" firstAttribute="leading" secondItem="ZMe-mV-QmA" secondAttribute="leading" constant="26" id="rbe-Ht-qvk"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="362" id="1mi-Av-qsk"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZMe-mV-QmA" secondAttribute="trailing" id="8K9-Bv-oIk"/>
+                                    <constraint firstItem="ZMe-mV-QmA" firstAttribute="leading" secondItem="OI9-u8-jBz" secondAttribute="leading" id="9jb-OH-AFo"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZMe-mV-QmA" secondAttribute="bottom" id="HIW-32-z67"/>
+                                    <constraint firstItem="ZMe-mV-QmA" firstAttribute="top" secondItem="OI9-u8-jBz" secondAttribute="top" id="O0B-3G-dsB"/>
+                                    <constraint firstItem="ZMe-mV-QmA" firstAttribute="width" secondItem="OI9-u8-jBz" secondAttribute="width" id="fAo-kb-A0V"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MAj-77-9n1" firstAttribute="leading" secondItem="npQ-DR-Ly2" secondAttribute="leading" constant="26" id="MDy-AN-D8d"/>
-                            <constraint firstItem="MAj-77-9n1" firstAttribute="leading" secondItem="npQ-DR-Ly2" secondAttribute="leading" constant="26" id="WTU-HW-QeU"/>
-                            <constraint firstItem="XXX-iv-BQu" firstAttribute="leading" secondItem="npQ-DR-Ly2" secondAttribute="leading" constant="26" id="Wy7-Jf-XKl"/>
-                            <constraint firstItem="XXX-iv-BQu" firstAttribute="top" secondItem="npQ-DR-Ly2" secondAttribute="top" constant="65" id="f2W-tP-ZeT"/>
-                            <constraint firstItem="MAj-77-9n1" firstAttribute="top" secondItem="npQ-DR-Ly2" secondAttribute="top" constant="102" id="vo9-cZ-FF2"/>
+                            <constraint firstItem="OI9-u8-jBz" firstAttribute="leading" secondItem="mqa-g5-wvV" secondAttribute="leading" id="3M4-Vc-kHV"/>
+                            <constraint firstItem="mqa-g5-wvV" firstAttribute="bottom" secondItem="OI9-u8-jBz" secondAttribute="bottom" id="6Xl-mc-Oky"/>
+                            <constraint firstItem="mqa-g5-wvV" firstAttribute="trailing" secondItem="OI9-u8-jBz" secondAttribute="trailing" id="IOz-uQ-Vu0"/>
+                            <constraint firstItem="OI9-u8-jBz" firstAttribute="width" secondItem="Fsc-Az-JPQ" secondAttribute="width" id="bE1-Gx-pGb"/>
+                            <constraint firstItem="OI9-u8-jBz" firstAttribute="top" secondItem="mqa-g5-wvV" secondAttribute="top" id="lI1-xg-xkv"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="npQ-DR-Ly2"/>
+                        <viewLayoutGuide key="safeArea" id="mqa-g5-wvV"/>
                     </view>
-                    <connections>
-                        <outlet property="overviewContent" destination="MAj-77-9n1" id="SYC-OR-qoT"/>
-                        <outlet property="overviewLabel" destination="XXX-iv-BQu" id="tNT-Xn-xgm"/>
-                    </connections>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7a5-hb-SSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2IW-GR-dZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021.7391304347827" y="-964.28571428571422"/>
+            <point key="canvasLocation" x="1775.3623188405797" y="-964.95535714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qca-9N-RfN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hrh-7f-gpF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9bT-Wo-I9P">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1GX-5F-e1H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXW-9P-Ivb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
     </scenes>
     <resources>
