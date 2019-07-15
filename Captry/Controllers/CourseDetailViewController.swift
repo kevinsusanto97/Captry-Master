@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import AVKit
 
-class CourseDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    let courseName = ["Rule of Thirds","Symetry","Triangle Ratio", "Golden Ratio"]
-    let courseThumb = [UIImage(named: "courseList1"),UIImage(named: "courseList2"),UIImage(named: "courseList3"),UIImage(named: "courseList4")]
+class CourseDetailViewController: UIViewController {
+
+    @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var overviewContent: UILabel!
+    @IBOutlet weak var tutorialVideoThumb: UIImageView!
+    @IBOutlet weak var containerTutorVideo: UIView!
     
+    let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,28 +30,37 @@ class CourseDetailViewController: UIViewController, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
         
-        cell.courseImageView.image = courseThumb[indexPath.row]
-        cell.courseLabel.text = courseName[indexPath.row]
-        
-        //style
-        cell.contentView.layer.cornerRadius = 10
-        cell.contentView.layer.borderWidth = 1.0
-        cell.contentView.layer.borderColor = UIColor.clear.cgColor
-        cell.contentView.layer.masksToBounds = false
-        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
-        cell.layer.shadowColor = UIColor.gray.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        cell.layer.shadowOpacity = 1.0
-        cell.layer.shadowRadius = 10
-    
-        
-        return cell
+        DispatchQueue.global().async {
+            let asset = AVAsset(url: self.videoURL!)
+            let assetImgGenerate : AVAssetImageGenerator = AVAssetImageGenerator(asset: asset)
+            assetImgGenerate.appliesPreferredTrackTransform = true
+            let time = CMTimeMake(value: 1, timescale: 2)
+            let img = try? assetImgGenerate.copyCGImage(at: time, actualTime: nil)
+            if img != nil {
+                let frameImg  = UIImage(cgImage: img!)
+                DispatchQueue.main.async(execute: {
+                    // assign your image to UIImageView
+                    self.tutorialVideoThumb.image = frameImg
+                })
+            }
+        }
     }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
+
+    @IBAction func playTutorialVideo(_ sender: Any) {
+        let player = AVPlayer(url: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+    }
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
     
     override func viewDidDisappear(_ animated: Bool) {

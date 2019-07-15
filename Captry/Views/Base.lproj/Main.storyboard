@@ -119,14 +119,22 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQL-WQ-z8m">
-                                                <rect key="frame" x="26" y="249" width="51" height="30"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMQ-x1-WKo">
+                                                <rect key="frame" x="26" y="186" width="362" height="195"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="camera"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rfM-QK-sn6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="362" height="195"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <gestureRecognizers/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
                                                 <connections>
-                                                    <segue destination="Ujc-gz-Tyr" kind="presentation" id="diE-Et-MRw"/>
+                                                    <outletCollection property="gestureRecognizers" destination="leJ-Z8-qDh" appends="YES" id="odB-jr-QWw"/>
                                                 </connections>
-                                            </button>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -159,8 +167,19 @@
                         <viewLayoutGuide key="safeArea" id="mqa-g5-wvV"/>
                     </view>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="containerTutorVideo" destination="UMQ-x1-WKo" id="bTU-Ws-8eV"/>
+                        <outlet property="overviewContent" destination="KCi-Ln-x1X" id="jYa-Sn-PS7"/>
+                        <outlet property="overviewLabel" destination="5VM-fm-ECK" id="x9M-iU-3RY"/>
+                        <outlet property="tutorialVideoThumb" destination="rfM-QK-sn6" id="kkv-MV-3Kx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2IW-GR-dZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="leJ-Z8-qDh">
+                    <connections>
+                        <action selector="playTutorialVideo:" destination="Dfj-Ca-i5p" id="jww-vp-Z10"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2045" y="21"/>
         </scene>
