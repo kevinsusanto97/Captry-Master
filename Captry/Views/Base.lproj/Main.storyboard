@@ -258,7 +258,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1gU-M2-3JJ">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="1gU-M2-3JJ" customClass="ReferencesCollectionViewCell" customModule="Captry" customModuleProvider="target">
                                         <rect key="frame" x="32.5" y="0.0" width="349" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -272,8 +272,15 @@
                                             </subviews>
                                         </view>
                                         <size key="customSize" width="349" height="250"/>
+                                        <connections>
+                                            <outlet property="locationImage" destination="uGm-YN-GGz" id="XgL-DW-2PS"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="YdH-ix-D1X" id="rK8-ej-0MR"/>
+                                    <outlet property="delegate" destination="YdH-ix-D1X" id="ixO-LS-mr7"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
