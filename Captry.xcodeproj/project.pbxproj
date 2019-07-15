@@ -16,6 +16,7 @@
 		5179B4ED22D8702200C35257 /* Course List Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179B4EC22D8702200C35257 /* Course List Style.swift */; };
 		B0CF518622DC66530090A1A6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF518522DC66530090A1A6 /* CameraViewController.swift */; };
 		B0CF518822DC667B0090A1A6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF518722DC667B0090A1A6 /* ResultViewController.swift */; };
+		517EF9F722DC87A40014CE6C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EF9F622DC87A40014CE6C /* CollectionViewCell.swift */; };
 		D4446DE422D89A5700A4CD24 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4446DE322D89A5700A4CD24 /* CourseDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		5179B4EC22D8702200C35257 /* Course List Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course List Style.swift"; sourceTree = "<group>"; };
 		B0CF518522DC66530090A1A6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B0CF518722DC667B0090A1A6 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		517EF9F622DC87A40014CE6C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D4446DE322D89A5700A4CD24 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				5179B4D922D857C200C35257 /* Main.storyboard */,
+				517EF9F622DC87A40014CE6C /* CollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				D4446DE422D89A5700A4CD24 /* CourseDetailViewController.swift in Sources */,
 				5179B4ED22D8702200C35257 /* Course List Style.swift in Sources */,
 				B0CF518822DC667B0090A1A6 /* ResultViewController.swift in Sources */,
+				517EF9F722DC87A40014CE6C /* CollectionViewCell.swift in Sources */,
 				5179B4D822D857C200C35257 /* ViewController.swift in Sources */,
 				5179B4D622D857C200C35257 /* AppDelegate.swift in Sources */,
 				5179B4DE22D857C200C35257 /* Captry.xcdatamodeld in Sources */,
