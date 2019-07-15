@@ -17,7 +17,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let availableImage = takenPhoto {
-        previewResult.image = availableImage
+            previewResult.image = UIImage(cgImage: availableImage.cgImage!, scale: availableImage.scale, orientation: .up)
         }
     }
     
@@ -46,7 +46,7 @@ class ResultViewController: UIViewController {
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
-        return .landscapeLeft
+        return .landscapeRight
     }
 
     /*

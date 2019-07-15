@@ -254,17 +254,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ysi-A0-xuG">
+                            <view contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ysi-A0-xuG">
                                 <rect key="frame" x="132" y="0.0" width="575" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rule of Third Grid" translatesAutoresizingMaskIntoConstraints="NO" id="baa-jD-tm0">
+                                <rect key="frame" x="144" y="0.0" width="551" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kwz-Fy-s9g">
-                                <rect key="frame" x="0.0" y="0.0" width="134" height="414"/>
+                                <rect key="frame" x="0.0" y="0.0" width="144" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yx-jL-zJx">
-                                <rect key="frame" x="705" y="0.0" width="191" height="414"/>
+                                <rect key="frame" x="695" y="0.0" width="201" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -292,16 +296,13 @@
                                     <action selector="flashButton:" destination="Ujc-gz-Tyr" eventType="touchUpInside" id="d62-cS-mwq"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gridLine-1" translatesAutoresizingMaskIntoConstraints="NO" id="baa-jD-tm0">
-                                <rect key="frame" x="132" y="0.0" width="575" height="414"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xaN-OV-i6k"/>
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="Ysi-A0-xuG" id="VSh-e6-ZzW"/>
+                        <outlet property="flashOutlet" destination="k43-Uf-Yif" id="Ytd-1k-9Lc"/>
                         <outlet property="gridView" destination="baa-jD-tm0" id="UfL-Ut-5Sg"/>
                     </connections>
                 </viewController>
@@ -390,12 +391,12 @@
     <resources>
         <image name="CourseList3" width="367" height="179"/>
         <image name="Course_thumb" width="367" height="179"/>
+        <image name="Rule of Third Grid" width="554" height="414"/>
         <image name="courseList2" width="367" height="179"/>
         <image name="courseList4" width="367" height="179"/>
         <image name="flashBtn" width="166.66667175292969" height="275.33334350585938"/>
         <image name="gridBtn" width="166.66667175292969" height="166.66667175292969"/>
-        <image name="gridLine-1" width="185.33332824707031" height="138"/>
-        <image name="shutter" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="shutter" width="250" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rj1-gi-Rfb"/>

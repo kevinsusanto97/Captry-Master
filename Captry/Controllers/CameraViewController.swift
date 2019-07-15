@@ -12,8 +12,10 @@ import AVFoundation
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     let captureSession = AVCaptureSession()
+    
     var previewLayer:CALayer!
     var captureDevice:AVCaptureDevice!
+    @IBOutlet var flashOutlet: UIButton!
     
     let minimumZoom: CGFloat = 1.0
     let maximumZoom: CGFloat = 3.0
@@ -21,7 +23,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     var takePhoto = false
     var isGridShowen = true
-    
+    var isUsingFlash = false
     
     @IBOutlet var cameraView: UIView!
     
@@ -93,8 +95,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         }
         //buat kamera
         let previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
+        previewLayer.connection?.videoOrientation = .landscapeRight
         
         self.previewLayer = previewLayer
+        
         self.cameraView.layer.addSublayer(previewLayer)
         self.previewLayer.frame = self.cameraView.bounds
         
@@ -175,15 +179,52 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
-        return .landscapeLeft
+        return .landscapeRight
     }
     
     
     @IBAction func flashButton(_ sender: Any) {
-        
+        if isUsingFlash == false {
+        flashOutlet.setImage(UIImage(named: "flashOn"), for: .application)
+            flashOn(device: captureDevice)
+            isUsingFlash = true
+        }else{
+            flashOutlet.setImage(UIImage(named: "flashBtn"), for: .disabled)
+            flashOff(device: captureDevice)
+            isUsingFlash = false
+        }
     }
     
+    private func flashOn(device:AVCaptureDevice)
+    {
+        do{
+            if (device.hasTorch)
+            {
+                try device.lockForConfiguration()
+                device.torchMode = .on
+                device.flashMode = .on
+                device.unlockForConfiguration()
+            }
+        }catch{
+            //DISABEL FLASH BUTTON HERE IF ERROR
+            print("Device tourch Flash Error ");
+        }
+    }
     
+    private func flashOff(device:AVCaptureDevice)
+    {
+        do{
+            if (device.hasTorch){
+                try device.lockForConfiguration()
+                device.torchMode = .off
+                device.flashMode = .off
+                device.unlockForConfiguration()
+            }
+        }catch{
+            //DISABEL FLASH BUTTON HERE IF ERROR
+            print("Device tourch Flash Error ");
+        }
+    }
     
 
     /*
