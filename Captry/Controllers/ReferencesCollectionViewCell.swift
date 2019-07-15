@@ -10,7 +10,7 @@ import UIKit
 
 class ReferencesCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var locationImage: UIImageView!
+    @IBOutlet weak var imageReferences: UIImageView!
     
     
 }
