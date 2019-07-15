@@ -29,10 +29,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.courseImageView.image = courseThumb[indexPath.row]
         cell.courseLabel.text = courseName[indexPath.row]
         
-        
         return cell
+        
+        
+        let titleCell = collectionView.dequeueReusableCell(withReuseIdentifier: "titleCell", for: indexPath) as! CollectionViewCell
+        
+        titleCell.courseImageView.image = courseThumb[indexPath.row]
+        titleCell.courseLabel.text = courseName[indexPath.row]
+        
+        return titleCell
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

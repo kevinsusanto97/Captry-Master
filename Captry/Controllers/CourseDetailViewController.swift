@@ -29,6 +29,7 @@ class CourseDetailViewController: UIViewController, UICollectionViewDataSource, 
         cell.courseLabel.text = courseName[indexPath.row]
         
         //style
+        
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.layer.borderWidth = 1.0
         cell.contentView.layer.borderColor = UIColor.clear.cgColor

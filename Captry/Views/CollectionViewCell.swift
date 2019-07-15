@@ -11,6 +11,7 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet var courseImageView: UIImageView!
     @IBOutlet var courseLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
     
     
 }
