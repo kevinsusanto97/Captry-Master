@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="WKQ-7w-Jv8">
@@ -154,7 +154,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="e69-RA-Det"/>
-                    <size key="freeformSize" width="414" height="1200"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <size key="freeformSize" width="414" height="1300"/>
                     <connections>
                         <segue destination="Dfj-Ca-i5p" kind="show" identifier="courseDetail" id="VfS-9I-9OI"/>
                     </connections>
@@ -168,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
         </scene>
-        <!--Course Detail View Controller-->
+        <!--Courses-->
         <scene sceneID="g6N-Jf-fND">
             <objects>
-                <viewController id="Dfj-Ca-i5p" customClass="CourseDetailViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Courses" id="Dfj-Ca-i5p" customClass="CourseDetailViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fsc-Az-JPQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,16 +237,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2IW-GR-dZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1775.3623188405797" y="-964.95535714285711"/>
+            <point key="canvasLocation" x="1703" y="-322"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qca-9N-RfN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hrh-7f-gpF" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="hrh-7f-gpF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9bT-Wo-I9P">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9bT-Wo-I9P">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

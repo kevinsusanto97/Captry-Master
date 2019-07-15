@@ -18,11 +18,11 @@ class ViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        super.navigationController?.setNavigationBarHidden(true, animated: false)
+        super.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        super.navigationController?.setNavigationBarHidden(false, animated: false)
+        super.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     @IBAction func CourseTappedAction(_ sender: Any) {
