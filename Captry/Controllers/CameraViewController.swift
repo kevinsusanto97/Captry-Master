@@ -185,11 +185,14 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     @IBAction func flashButton(_ sender: Any) {
         if isUsingFlash == false {
-        flashOutlet.setImage(UIImage(named: "flashOn"), for: .application)
+            flashOutlet.isSelected = true
+        flashOutlet.setImage(UIImage(named: "flashOn"), for: .selected)
+            
             flashOn(device: captureDevice)
             isUsingFlash = true
         }else{
-            flashOutlet.setImage(UIImage(named: "flashBtn"), for: .disabled)
+           flashOutlet.isSelected = false
+        flashOutlet.setImage(UIImage(named: "flashBtn"), for: .normal)
             flashOff(device: captureDevice)
             isUsingFlash = false
         }
