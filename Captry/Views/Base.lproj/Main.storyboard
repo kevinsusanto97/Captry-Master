@@ -11,173 +11,91 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="rDd-Kk-VTI">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                <viewController id="yGp-fQ-ggo" customClass="ViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wWg-BI-NX9">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="WKQ-7w-Jv8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1200"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTg-jc-2Bn">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi good people!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnM-uR-3Qa">
-                                                <rect key="frame" x="35" y="71" width="258" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
-                                                <color key="textColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What would you like to learn today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Be-bcb">
-                                                <rect key="frame" x="35" y="116" width="243" height="18"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="25" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9lD-bj-wd1">
-                                                <rect key="frame" x="35" y="170" width="347" height="999"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <view contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r9U-iP-dx7" customClass="courseListStyle" customModule="Captry">
-                                                        <rect key="frame" x="0.0" y="0.0" width="347" height="231"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Course_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="d71-KG-huu">
-                                                                <rect key="frame" x="0.0" y="-1" width="347" height="170"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rule of Thirds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm0-Tf-gh8">
-                                                                <rect key="frame" x="20" y="188" width="130" height="24"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration" label="Rule of Thirds">
-                                                            <bool key="isElement" value="YES"/>
-                                                        </accessibility>
-                                                        <gestureRecognizers/>
-                                                        <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="ZDj-cn-B4V" appends="YES" id="IlG-7G-F02"/>
-                                                        </connections>
-                                                    </view>
-                                                    <view contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ht-uD-pwK" customClass="courseListStyle" customModule="Captry">
-                                                        <rect key="frame" x="0.0" y="256" width="347" height="231"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="courseList2" translatesAutoresizingMaskIntoConstraints="NO" id="91W-E8-SVF">
-                                                                <rect key="frame" x="0.0" y="-1" width="347" height="170"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Symetry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40C-BG-vvV">
-                                                                <rect key="frame" x="20" y="188" width="80" height="24"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration" label="Symetry">
-                                                            <bool key="isElement" value="YES"/>
-                                                        </accessibility>
-                                                    </view>
-                                                    <view contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wpz-VP-blT" customClass="courseListStyle" customModule="Captry">
-                                                        <rect key="frame" x="0.0" y="512" width="347" height="231"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CourseList3" translatesAutoresizingMaskIntoConstraints="NO" id="e5i-ag-XH4">
-                                                                <rect key="frame" x="0.0" y="-1" width="347" height="170"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Golden Triangle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8u-zb-lOg">
-                                                                <rect key="frame" x="20" y="188" width="148" height="24"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration" label="Golden Triangle">
-                                                            <bool key="isElement" value="YES"/>
-                                                        </accessibility>
-                                                    </view>
-                                                    <view contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4o-ZF-4Q8" customClass="courseListStyle" customModule="Captry">
-                                                        <rect key="frame" x="0.0" y="768" width="347" height="231"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="courseList4" translatesAutoresizingMaskIntoConstraints="NO" id="pdG-X6-hY5">
-                                                                <rect key="frame" x="0.0" y="-1" width="347" height="170"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Golden Triangle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWc-nq-G8M">
-                                                                <rect key="frame" x="20" y="188" width="148" height="24"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration" label="Golden Triangle">
-                                                            <bool key="isElement" value="YES"/>
-                                                        </accessibility>
-                                                    </view>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1200" id="ehk-bH-kfR"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="WTg-jc-2Bn" secondAttribute="trailing" id="5Fj-rW-nov"/>
-                                    <constraint firstAttribute="bottom" secondItem="WTg-jc-2Bn" secondAttribute="bottom" id="Dvk-CM-22C"/>
-                                    <constraint firstItem="WTg-jc-2Bn" firstAttribute="top" secondItem="WKQ-7w-Jv8" secondAttribute="top" id="PbV-12-GPe"/>
-                                    <constraint firstItem="WTg-jc-2Bn" firstAttribute="centerX" secondItem="WKQ-7w-Jv8" secondAttribute="centerX" id="YAv-Ex-ETz"/>
-                                    <constraint firstItem="WTg-jc-2Bn" firstAttribute="leading" secondItem="WKQ-7w-Jv8" secondAttribute="leading" id="xyH-Ht-zbC"/>
-                                </constraints>
-                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z4g-Dw-Vf9">
+                                <rect key="frame" x="0.0" y="204" width="414" height="692"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="30" id="13m-Fg-JhT">
+                                    <size key="itemSize" width="379" height="251"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Qly-XP-o7e" customClass="CollectionViewCell" customModule="Captry" customModuleProvider="target">
+                                        <rect key="frame" x="17.5" y="10" width="379" height="251"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="379" height="251"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="courseList1" translatesAutoresizingMaskIntoConstraints="NO" id="Jcl-GS-NWC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="379" height="186"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rule of Thirds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zR2-3o-dK5">
+                                                    <rect key="frame" x="20" y="205" width="142" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="customSize" width="379" height="251"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="courseImageView" destination="Jcl-GS-NWC" id="kzG-tC-WuG"/>
+                                            <outlet property="courseLabel" destination="zR2-3o-dK5" id="Asm-fk-GGv"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="yGp-fQ-ggo" id="6Kj-lV-p8T"/>
+                                    <outlet property="delegate" destination="yGp-fQ-ggo" id="O72-1d-NtK"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello good people!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShB-q6-Tvc">
+                                <rect key="frame" x="20" y="101" width="308" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                                <color key="textColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="WKQ-7w-Jv8" secondAttribute="bottom" id="NmY-oN-LZB"/>
-                            <constraint firstAttribute="trailing" secondItem="WKQ-7w-Jv8" secondAttribute="trailing" id="Ovv-1t-3JI"/>
-                            <constraint firstItem="WKQ-7w-Jv8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cMs-qh-wZh"/>
-                            <constraint firstItem="WKQ-7w-Jv8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="miy-qe-1Fm"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Isi-Iy-sRb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="e69-RA-Det"/>
-                    <size key="freeformSize" width="414" height="1200"/>
-                    <connections>
-                        <segue destination="Dfj-Ca-i5p" kind="show" identifier="courseDetail" id="VfS-9I-9OI"/>
-                    </connections>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="C4f-KO-kmF"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ZDj-cn-B4V">
-                    <connections>
-                        <action selector="CourseTappedAction:" destination="BYZ-38-t0r" id="Rmy-Td-boI"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WKW-34-eKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
+            <point key="canvasLocation" x="931.88405797101461" y="-15.401785714285714"/>
         </scene>
-        <!--Course Detail View Controller-->
+        <!--Courses-->
         <scene sceneID="g6N-Jf-fND">
             <objects>
-                <viewController id="Dfj-Ca-i5p" customClass="CourseDetailViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Courses" id="Dfj-Ca-i5p" customClass="CourseDetailViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fsc-Az-JPQ">
                         <rect key="frame" x="0.0" y="0.0" width="531.5" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OI9-u8-jBz">
-                                <rect key="frame" x="0.0" y="44" width="487.5" height="349"/>
+                                <rect key="frame" x="0.0" y="0.0" width="487.5" height="393"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMe-mV-QmA">
                                         <rect key="frame" x="0.0" y="0.0" width="487.5" height="1000"/>
@@ -201,14 +119,22 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQL-WQ-z8m">
-                                                <rect key="frame" x="26" y="249" width="51" height="30"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMQ-x1-WKo">
+                                                <rect key="frame" x="26" y="186" width="362" height="195"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="camera"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rfM-QK-sn6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="362" height="195"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <gestureRecognizers/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
                                                 <connections>
-                                                    <segue destination="Ujc-gz-Tyr" kind="presentation" id="diE-Et-MRw"/>
+                                                    <outletCollection property="gestureRecognizers" destination="leJ-Z8-qDh" appends="YES" id="odB-jr-QWw"/>
                                                 </connections>
-                                            </button>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -241,8 +167,19 @@
                         <viewLayoutGuide key="safeArea" id="mqa-g5-wvV"/>
                     </view>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="containerTutorVideo" destination="UMQ-x1-WKo" id="bTU-Ws-8eV"/>
+                        <outlet property="overviewContent" destination="KCi-Ln-x1X" id="jYa-Sn-PS7"/>
+                        <outlet property="overviewLabel" destination="5VM-fm-ECK" id="x9M-iU-3RY"/>
+                        <outlet property="tutorialVideoThumb" destination="rfM-QK-sn6" id="kkv-MV-3Kx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2IW-GR-dZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="leJ-Z8-qDh">
+                    <connections>
+                        <action selector="playTutorialVideo:" destination="Dfj-Ca-i5p" id="jww-vp-Z10"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2045" y="21"/>
         </scene>
@@ -372,15 +309,17 @@
         <!--Navigation Controller-->
         <scene sceneID="qca-9N-RfN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hrh-7f-gpF" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hrh-7f-gpF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9bT-Wo-I9P">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1GX-5F-e1H"/>
+                        <segue destination="yGp-fQ-ggo" kind="relationship" relationship="rootViewController" id="qvf-8b-Nec"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXW-9P-Ivb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -389,16 +328,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CourseList3" width="367" height="179"/>
-        <image name="Course_thumb" width="367" height="179"/>
         <image name="Rule of Third Grid" width="554" height="414"/>
-        <image name="courseList2" width="367" height="179"/>
-        <image name="courseList4" width="367" height="179"/>
+        <image name="courseList1" width="367" height="179"/>
         <image name="flashBtn" width="166.66667175292969" height="275.33334350585938"/>
         <image name="gridBtn" width="166.66667175292969" height="166.66667175292969"/>
         <image name="shutter" width="250" height="250"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="rj1-gi-Rfb"/>
-    </inferredMetricsTieBreakers>
 </document>
