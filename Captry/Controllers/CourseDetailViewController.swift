@@ -15,14 +15,14 @@ class CourseDetailViewController: UIViewController {
     @IBOutlet weak var overviewContent: UILabel!
     @IBOutlet weak var tutorialVideoThumb: UIImageView!
     @IBOutlet weak var containerTutorVideo: UIView!
-//    var temp: Course = 
+    var temp: String?
     
     let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        navigationItem.title = temp
         DispatchQueue.global().async {
             let asset = AVAsset(url: self.videoURL!)
             let assetImgGenerate : AVAssetImageGenerator = AVAssetImageGenerator(asset: asset)

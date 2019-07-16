@@ -102,6 +102,7 @@
                     <connections>
                         <outlet property="collectionViewOutlet" destination="z4g-Dw-Vf9" id="oTf-7m-qLY"/>
                         <outlet property="titleBox" destination="YqH-Q8-HVW" id="ecv-fQ-W1e"/>
+                        <segue destination="Dfj-Ca-i5p" kind="show" identifier="courseDetailSegue" id="Clx-ls-Huk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKW-34-eKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
