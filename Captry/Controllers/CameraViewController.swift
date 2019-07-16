@@ -38,7 +38,37 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         super.viewDidLoad()
         //step 1 bikin gesture
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinch(sender:)))
+        let tabGesture = UITapGestureRecognizer(target: self, action: #selector(focus(sender:)))
+        cameraView.addGestureRecognizer(tabGesture)
         cameraView.addGestureRecognizer(pinchGesture)
+    }
+    
+    @objc func focus(sender:UITapGestureRecognizer){
+        if (sender.state == .ended) {
+            let thisFocusPoint = sender.location(in: cameraView)
+            
+            print("touch to focus", thisFocusPoint)
+            
+            let focus_x = thisFocusPoint.x / cameraView.frame.size.width
+            let focus_y = thisFocusPoint.y / cameraView.frame.size.height
+            
+            if (captureDevice!.isFocusModeSupported(.autoFocus) && captureDevice!.isFocusPointOfInterestSupported) {
+                do {
+                    try captureDevice?.lockForConfiguration()
+                    captureDevice?.focusMode = .autoFocus
+                    captureDevice?.focusPointOfInterest = CGPoint(x: focus_x, y: focus_y)
+                    
+                    if (captureDevice!.isExposureModeSupported(.autoExpose) && captureDevice!.isExposurePointOfInterestSupported) {
+                        captureDevice?.exposureMode = .autoExpose;
+                        captureDevice?.exposurePointOfInterest = CGPoint(x: focus_x, y: focus_y);
+                    }
+                    
+                    captureDevice?.unlockForConfiguration()
+                } catch {
+                    print(error)
+                }
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
