@@ -13,6 +13,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 
     let captureSession = AVCaptureSession()
     
+    @IBOutlet var focusRect: UIImageView!
     var previewLayer:CALayer!
     var captureDevice:AVCaptureDevice!
     @IBOutlet var flashOutlet: UIButton!
@@ -37,9 +38,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     override func viewDidLoad() {
         super.viewDidLoad()
         //step 1 bikin gesture
+        focusRect.alpha = 0
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinch(sender:)))
-        let tabGesture = UITapGestureRecognizer(target: self, action: #selector(focus(sender:)))
-        cameraView.addGestureRecognizer(tabGesture)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(focus(sender:)))
+        cameraView.addGestureRecognizer(tapGesture)
         cameraView.addGestureRecognizer(pinchGesture)
     }
     
@@ -51,6 +53,14 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             let focus_x = thisFocusPoint.x / cameraView.frame.size.width
             let focus_y = thisFocusPoint.y / cameraView.frame.size.height
+            
+            focusRect!.center = CGPoint(x: (thisFocusPoint.x+150), y: thisFocusPoint.y)
+            
+            //focusRect!.frame = CGRect(origin: thisFocusPoint, size: focusRect.frame.size)
+            
+            UIView.animate(withDuration: 1, animations: {
+                self.focusRect.alpha = 1.0
+            })
             
             if (captureDevice!.isFocusModeSupported(.autoFocus) && captureDevice!.isFocusPointOfInterestSupported) {
                 do {
@@ -117,6 +127,11 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
     
     func beginSession(){
+    if(captureDevice!.isFocusModeSupported(.continuousAutoFocus)) {
+            try! captureDevice!.lockForConfiguration()
+            captureDevice!.focusMode = .continuousAutoFocus
+            captureDevice!.unlockForConfiguration()
+        }
         do {
             let captureDeviceInput = try AVCaptureDeviceInput(device: captureDevice)
             captureSession.addInput(captureDeviceInput)
