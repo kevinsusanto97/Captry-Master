@@ -30,6 +30,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.courseLabel.text = courseName[indexPath.row]
         
         
+        
         return cell
     }
     
