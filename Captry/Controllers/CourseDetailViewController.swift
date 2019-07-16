@@ -12,10 +12,20 @@ class CourseDetailViewController: UIViewController, UICollectionViewDataSource, 
     let courseName = ["Rule of Thirds","Symetry","Triangle Ratio", "Golden Ratio"]
     let courseThumb = [UIImage(named: "courseList1"),UIImage(named: "courseList2"),UIImage(named: "courseList3"),UIImage(named: "courseList4")]
     
+    @IBOutlet var boxTitle: UIView!
+    
+    func boxTitleStyle() {
+        self.boxTitle.layer.cornerRadius = 10
+        self.boxTitle.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.boxTitle.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        self.boxTitle.layer.shadowRadius = 20
+        self.boxTitle.layer.shadowOpacity = 0.5
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        boxTitleStyle()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -33,16 +43,13 @@ class CourseDetailViewController: UIViewController, UICollectionViewDataSource, 
         cell.layer.borderWidth = 1.0
         cell.layer.borderColor = UIColor.clear.cgColor
         cell.layer.masksToBounds = false
-        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.layer.cornerRadius).cgPath
         cell.layer.shadowColor = UIColor.gray.cgColor
         cell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
         cell.layer.shadowOpacity = 0.5
         cell.layer.shadowRadius = 20
     
-        
         return cell
-        
-        
     }
     
     
@@ -59,6 +66,7 @@ class CourseDetailViewController: UIViewController, UICollectionViewDataSource, 
     @IBAction func CourseTappedAction(_ sender: Any) {
         performSegue(withIdentifier: "courseDetail", sender: nil)
     }
+    
     
     
     
