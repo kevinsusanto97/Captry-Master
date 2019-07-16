@@ -135,6 +135,21 @@
                                                     <outletCollection property="gestureRecognizers" destination="leJ-Z8-qDh" appends="YES" id="odB-jr-QWw"/>
                                                 </connections>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBt-GK-oYh">
+                                                <rect key="frame" x="26" y="712" width="165" height="57"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="guideBtn">
+                                                    <color key="titleColor" red="1" green="0.78516529800000001" blue="0.2191986497" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-01-xmZ">
+                                                <rect key="frame" x="217" y="712" width="165" height="57"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="practiceBtn"/>
+                                                <connections>
+                                                    <segue destination="Ujc-gz-Tyr" kind="presentation" id="HpY-c5-EaI"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -181,7 +196,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2045" y="21"/>
+            <point key="canvasLocation" x="2044.9275362318842" y="20.758928571428569"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="9a3-Hc-2zp">
@@ -332,6 +347,11 @@
         <image name="courseList1" width="367" height="179"/>
         <image name="flashBtn" width="166.66667175292969" height="275.33334350585938"/>
         <image name="gridBtn" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="guideBtn" width="166.66667175292969" height="57.666667938232422"/>
+        <image name="practiceBtn" width="166.66667175292969" height="57.666667938232422"/>
         <image name="shutter" width="250" height="250"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HpY-c5-EaI"/>
+    </inferredMetricsTieBreakers>
 </document>
