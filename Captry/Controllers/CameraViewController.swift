@@ -55,13 +55,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             let focus_y = thisFocusPoint.y / cameraView.frame.size.height
             
             focusRect!.center = CGPoint(x: (thisFocusPoint.x+150), y: thisFocusPoint.y)
-            
-            //focusRect!.frame = CGRect(origin: thisFocusPoint, size: focusRect.frame.size)
-            
-            UIView.animate(withDuration: 1, animations: {
-                self.focusRect.alpha = 1.0
-            })
-            
+        
             if (captureDevice!.isFocusModeSupported(.autoFocus) && captureDevice!.isFocusPointOfInterestSupported) {
                 do {
                     try captureDevice?.lockForConfiguration()
@@ -71,6 +65,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
                     if (captureDevice!.isExposureModeSupported(.autoExpose) && captureDevice!.isExposurePointOfInterestSupported) {
                         captureDevice?.exposureMode = .autoExpose;
                         captureDevice?.exposurePointOfInterest = CGPoint(x: focus_x, y: focus_y);
+                        
+                            UIView.animate(withDuration: 1, animations: {
+                                self.focusRect.alpha = 1.0
+                            })
                     }
                     
                     captureDevice?.unlockForConfiguration()
