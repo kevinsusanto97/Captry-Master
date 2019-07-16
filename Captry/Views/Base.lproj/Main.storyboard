@@ -218,7 +218,7 @@
                                 <rect key="frame" x="132" y="0.0" width="575" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rule of Third Grid" translatesAutoresizingMaskIntoConstraints="NO" id="baa-jD-tm0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RuleOfThirdGrid" translatesAutoresizingMaskIntoConstraints="NO" id="baa-jD-tm0">
                                 <rect key="frame" x="144" y="0.0" width="551" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -357,7 +357,7 @@
     </scenes>
     <resources>
         <image name="FocusRect" width="166.66667175292969" height="165.66667175292969"/>
-        <image name="Rule of Third Grid" width="554" height="414"/>
+        <image name="RuleOfThirdGrid" width="335" height="250"/>
         <image name="courseList1" width="367" height="179"/>
         <image name="flashBtn" width="166.66667175292969" height="275.33334350585938"/>
         <image name="gridBtn" width="166.66667175292969" height="166.66667175292969"/>
