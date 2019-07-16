@@ -229,6 +229,7 @@
                         <outlet property="overviewContent" destination="KCi-Ln-x1X" id="jYa-Sn-PS7"/>
                         <outlet property="overviewLabel" destination="5VM-fm-ECK" id="x9M-iU-3RY"/>
                         <outlet property="playerView" destination="uAY-G1-QaR" id="LKC-yG-dMh"/>
+                        <outlet property="referencesImage" destination="1Fg-Av-7Eb" id="uQQ-ob-f07"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2IW-GR-dZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
