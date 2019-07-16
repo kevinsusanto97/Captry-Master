@@ -12,3 +12,4 @@ An app that provide camera tutorial with real time practice to learn composition
 * **Enjel Hutasoit**
 * **Fauzan Achmad**
 * **Kevin Sutanto**
+* **Muhammad Rajab**
