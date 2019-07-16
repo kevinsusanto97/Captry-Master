@@ -23,28 +23,28 @@ class CourseDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return courseName.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-        
-        DispatchQueue.global().async {
-            let asset = AVAsset(url: self.videoURL!)
-            let assetImgGenerate : AVAssetImageGenerator = AVAssetImageGenerator(asset: asset)
-            assetImgGenerate.appliesPreferredTrackTransform = true
-            let time = CMTimeMake(value: 1, timescale: 2)
-            let img = try? assetImgGenerate.copyCGImage(at: time, actualTime: nil)
-            if img != nil {
-                let frameImg  = UIImage(cgImage: img!)
-                DispatchQueue.main.async(execute: {
-                    // assign your image to UIImageView
-                    self.tutorialVideoThumb.image = frameImg
-                })
-            }
-        }
-    }
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return courseName.count
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+//        
+//        DispatchQueue.global().async {
+//            let asset = AVAsset(url: self.videoURL!)
+//            let assetImgGenerate : AVAssetImageGenerator = AVAssetImageGenerator(asset: asset)
+//            assetImgGenerate.appliesPreferredTrackTransform = true
+//            let time = CMTimeMake(value: 1, timescale: 2)
+//            let img = try? assetImgGenerate.copyCGImage(at: time, actualTime: nil)
+//            if img != nil {
+//                let frameImg  = UIImage(cgImage: img!)
+//                DispatchQueue.main.async(execute: {
+//                    // assign your image to UIImageView
+//                    self.tutorialVideoThumb.image = frameImg
+//                })
+//            }
+//        }
+//    }
 
     @IBAction func playTutorialVideo(_ sender: Any) {
         let player = AVPlayer(url: videoURL!)
@@ -71,7 +71,7 @@ class CourseDetailViewController: UIViewController {
     @IBAction func CourseTappedAction(_ sender: Any) {
         performSegue(withIdentifier: "courseDetail", sender: nil)
     }
-    
+    */
     
     
     

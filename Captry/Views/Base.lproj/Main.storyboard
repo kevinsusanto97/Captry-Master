@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="yGp-fQ-ggo" customClass="CourseDetailViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wWg-BI-NX9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z4g-Dw-Vf9">
@@ -95,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OI9-u8-jBz">
-                                <rect key="frame" x="0.0" y="44" width="487.5" height="349"/>
+                                <rect key="frame" x="0.0" y="0.0" width="487.5" height="393"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMe-mV-QmA">
                                         <rect key="frame" x="0.0" y="0.0" width="487.5" height="1000"/>
@@ -312,7 +312,6 @@
                 <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hrh-7f-gpF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9bT-Wo-I9P">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -329,17 +328,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CourseList3" width="367" height="179"/>
-        <image name="Course_thumb" width="367" height="179"/>
         <image name="Rule of Third Grid" width="554" height="414"/>
-        <image name="courseList2" width="367" height="179"/>
-        <image name="courseList4" width="367" height="179"/>
+        <image name="courseList1" width="367" height="179"/>
         <image name="flashBtn" width="166.66667175292969" height="275.33334350585938"/>
         <image name="gridBtn" width="166.66667175292969" height="166.66667175292969"/>
         <image name="shutter" width="250" height="250"/>
-        <image name="courseList1" width="367" height="179"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="rj1-gi-Rfb"/>
-    </inferredMetricsTieBreakers>
 </document>
