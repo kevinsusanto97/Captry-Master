@@ -15,12 +15,14 @@
 		5179B4EB22D8678900C35257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5179B4EA22D8678900C35257 /* Assets.xcassets */; };
 		5179B4ED22D8702200C35257 /* Course List Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179B4EC22D8702200C35257 /* Course List Style.swift */; };
 		517EF9F722DC87A40014CE6C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EF9F622DC87A40014CE6C /* CollectionViewCell.swift */; };
+		7F9B743C313C1B278C6DD173 /* Pods_Captry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F371B0B5870DBF19456F0B2 /* Pods_Captry.framework */; };
 		B0CF518622DC66530090A1A6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF518522DC66530090A1A6 /* CameraViewController.swift */; };
 		B0CF518822DC667B0090A1A6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF518722DC667B0090A1A6 /* ResultViewController.swift */; };
 		D4446DE422D89A5700A4CD24 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4446DE322D89A5700A4CD24 /* CourseDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B0CC4DA33EE4EBB2C2BDB57 /* Pods-Captry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Captry.debug.xcconfig"; path = "Target Support Files/Pods-Captry/Pods-Captry.debug.xcconfig"; sourceTree = "<group>"; };
 		5179B4D222D857C200C35257 /* Captry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Captry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5179B4D522D857C200C35257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5179B4D722D857C200C35257 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,9 +33,11 @@
 		5179B4EA22D8678900C35257 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5179B4EC22D8702200C35257 /* Course List Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course List Style.swift"; sourceTree = "<group>"; };
 		517EF9F622DC87A40014CE6C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		6F371B0B5870DBF19456F0B2 /* Pods_Captry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Captry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CF518522DC66530090A1A6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B0CF518722DC667B0090A1A6 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		D4446DE322D89A5700A4CD24 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
+		F243580E3D1F823EB24CE7A6 /* Pods-Captry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Captry.release.xcconfig"; path = "Target Support Files/Pods-Captry/Pods-Captry.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F9B743C313C1B278C6DD173 /* Pods_Captry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		328B833CD4DA0E8D6FA658DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F371B0B5870DBF19456F0B2 /* Pods_Captry.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5179B4C922D857C200C35257 = {
 			isa = PBXGroup;
 			children = (
 				5179B4D422D857C200C35257 /* Captry */,
 				5179B4D322D857C200C35257 /* Products */,
+				6B612FC8A50DA28E42C414E2 /* Pods */,
+				328B833CD4DA0E8D6FA658DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +92,16 @@
 				5179B4DC22D857C200C35257 /* Captry.xcdatamodeld */,
 			);
 			path = Captry;
+			sourceTree = "<group>";
+		};
+		6B612FC8A50DA28E42C414E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B0CC4DA33EE4EBB2C2BDB57 /* Pods-Captry.debug.xcconfig */,
+				F243580E3D1F823EB24CE7A6 /* Pods-Captry.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		D4446DE022D8990400A4CD24 /* Models */ = {
@@ -113,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5179B4E722D857C300C35257 /* Build configuration list for PBXNativeTarget "Captry" */;
 			buildPhases = (
+				29B24CE92EB0949BE97B9580 /* [CP] Check Pods Manifest.lock */,
 				5179B4CE22D857C200C35257 /* Sources */,
 				5179B4CF22D857C200C35257 /* Frameworks */,
 				5179B4D022D857C200C35257 /* Resources */,
+				99524A63FC492E436BD4FD6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,6 +198,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29B24CE92EB0949BE97B9580 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Captry-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99524A63FC492E436BD4FD6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Captry/Pods-Captry-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Captry/Pods-Captry-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Captry/Pods-Captry-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5179B4CE22D857C200C35257 /* Sources */ = {
@@ -328,10 +397,11 @@
 		};
 		5179B4E822D857C300C35257 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B0CC4DA33EE4EBB2C2BDB57 /* Pods-Captry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MX4GSTN68K;
+				DEVELOPMENT_TEAM = BC5HFU96D3;
 				INFOPLIST_FILE = Captry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -346,10 +416,11 @@
 		};
 		5179B4E922D857C300C35257 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F243580E3D1F823EB24CE7A6 /* Pods-Captry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MX4GSTN68K;
+				DEVELOPMENT_TEAM = BC5HFU96D3;
 				INFOPLIST_FILE = Captry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
