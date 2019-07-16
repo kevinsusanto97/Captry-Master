@@ -8,75 +8,34 @@
 
 import UIKit
 import AVKit
+import YoutubePlayer_in_WKWebView
 
 class CourseDetailViewController: UIViewController {
 
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var overviewContent: UILabel!
-    @IBOutlet weak var tutorialVideoThumb: UIImageView!
-    @IBOutlet weak var containerTutorVideo: UIView!
-    var temp: String?
+    @IBOutlet weak var playerView: WKYTPlayerView!
+    let course: [[String]] = [
+        [
+            "Rule of Thirds",
+            "In this course you will learn about how to place some object into grids. Rule of third is a popular composition techniqu",
+            "xTI09ckSqys"
+        ],
+        [
+            "Symetry",
+            "Symetry content",
+            "h1nWJHK242Q"
+        ]
+    ]
     
-    let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+    var temp: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationItem.title = temp
-        DispatchQueue.global().async {
-            let asset = AVAsset(url: self.videoURL!)
-            let assetImgGenerate : AVAssetImageGenerator = AVAssetImageGenerator(asset: asset)
-            assetImgGenerate.appliesPreferredTrackTransform = true
-            let time = CMTimeMake(value: 1, timescale: 2)
-            let img = try? assetImgGenerate.copyCGImage(at: time, actualTime: nil)
-            if img != nil {
-                let frameImg  = UIImage(cgImage: img!)
-                DispatchQueue.main.async(execute: {
-                    // assign your image to UIImageView
-                    self.tutorialVideoThumb.image = frameImg
-                })
-            }
-        }
-        
+        playerView.load(withVideoId: "xTI09ckSqys")
+        overviewContent.text = ""
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-//        print(temp!)
-//        overviewLabel.text = temp
-    }
-
-    @IBAction func playTutorialVideo(_ sender: Any) {
-        let player = AVPlayer(url: videoURL!)
-        let playerViewController = AVPlayerViewController()
-        playerViewController.player = player
-        self.present(playerViewController, animated: true) {
-            playerViewController.player!.play()
-        }
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    @IBAction func CourseTappedAction(_ sender: Any) {
-        performSegue(withIdentifier: "courseDetail", sender: nil)
-    }
-    */
-    
-    
-    
     
 }
