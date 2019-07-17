@@ -12,6 +12,7 @@ import AVFoundation
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     let captureSession = AVCaptureSession()
+    let dataGrid = CoursesData()
     
     var previewLayer:CALayer!
     var captureDevice:AVCaptureDevice!
@@ -29,6 +30,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     @IBOutlet var gridView: UIImageView!
     
+//    var courseId: String?
+    
     @IBAction func takePhoto(_ sender: Any) {
         takePhoto = true
     }
@@ -38,11 +41,21 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         super.viewDidLoad()
         //step 1 bikin gesture
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinch(sender:)))
-        cameraView.addGestureRecognizer(pinchGesture)
+         cameraView.addGestureRecognizer(pinchGesture)
+        changeGrid()
+        
+//        print(courseId!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         prepareCamera()
+    }
+    
+    func changeGrid()
+    {
+        let listGrid = dataGrid.goldenRatioGrid
+        let gridImage: UIImage = UIImage(named: listGrid)!
+        gridView.image = gridImage
     }
     
     //func pinch

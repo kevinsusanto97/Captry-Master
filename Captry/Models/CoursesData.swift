@@ -13,17 +13,21 @@ class CoursesData
     let ruleOfThirdOverview: String = "In this course you will learn about how to place some object into grids. Rule of third is a popular composition technique…"
     let ruleOfThirdVideo: String = "xTI09ckSqys"
     let ruleOfThirdImage: String = "courseList1"
+    let ruleOfThirdGrid: String = "Rule Of Third Grid"
     
     let symetryOverview: String = "In this course you will learn about how to place some object into grids. Rule of third is a popular composition technique…"
     let symetryVideo: String = "c7Ii9o5HjpE"
     let symetryImage: String = "courseList2"
+    let symetryGrid: String = "Symmetry Grid"
     
     let goldenTriangleOverview: String = "In this course you will learn about how to place some object into grids. Rule of third is a popular composition technique…"
     let goldenTriangleVideo: String = "MRhp0WmXitM"
     let goldenTriangleImage: String = "courseList3"
+    let goldenTriangleGrid: String = "Golden Triangle Grid"
     
     let goldenRatioOverview: String = "In this course you will learn about how to place some object into grids. Rule of third is a popular composition technique…"
     let goldenRatioVideo: String = "zO1jsOcfo0o"
     let goldenRatioImage: String = "courseList4"
+    let goldenRatioGrid: String = "Golden Ratio Grid"
     
 }

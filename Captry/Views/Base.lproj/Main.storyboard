@@ -190,7 +190,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Practice Now"/>
                                                 <connections>
-                                                    <segue destination="Ujc-gz-Tyr" kind="show" id="V56-XB-Y8h"/>
+                                                    <segue destination="Ujc-gz-Tyr" kind="show" identifier="cameraSegue" id="V56-XB-Y8h"/>
                                                 </connections>
                                             </button>
                                         </subviews>

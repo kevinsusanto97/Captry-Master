@@ -18,17 +18,23 @@ class CourseDetailViewController: UIViewController {
     @IBOutlet weak var referencesImage: UIImageView!
     
     var temp: String?
+    var courseDetailId: String = ""
     
     var data = CoursesData()
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationItem.title = temp
 //        overviewContent.text = ""
-        changeLabel()
-        changeVideo()
-        addImageToImageView()
+//        changeLabel()
+//        changeVideo()
+//        addImageToImageView()
+        changeView()
+        courseDetailId = temp!
+        print(courseDetailId)
+        
     }
     
     func changeView()
@@ -42,84 +48,108 @@ class CourseDetailViewController: UIViewController {
         }
         else if temp == "Symetry"
         {
-            overviewContent.text = "Simetris"
+            overviewContent.text = data.symetryOverview
             listImage = data.symetryImage
             videoLink = data.symetryVideo
             
         }
         else if temp == "Triangle Ratio"
         {
-            overviewContent.text = "Segitiga"
-        }
-        else if temp == "Golden Ratio"
-        {
-            overviewContent.text = "Emas"
-        }
-    }
-    func changeLabel()
-    {
-        if temp == "Rule of Thirds"
-        {
-            overviewContent.text = data.ruleOfThirdOverview
-        }
-        //overviewContent.text = "Title"
-        else if temp == "Symetry"
-        {
-            overviewContent.text = "Simetris"
-        }
-        else if temp == "Triangle Ratio"
-        {
-            overviewContent.text = "Segitiga"
-        }
-        else if temp == "Golden Ratio"
-        {
-            overviewContent.text = "Emas"
-        }
-    }
-    
-    func addImageToImageView()
-    {
-        var listImage = data.ruleOfThirdImage
-        if temp == "Rule of Thirds"
-        {
-            listImage = data.ruleOfThirdImage
-        }
-        else if temp == "Symetry"
-        {
-            listImage = data.symetryImage
-        }
-        else if temp == "Triangle Ratio"
-        {
+            overviewContent.text = data.goldenTriangleOverview
             listImage = data.goldenTriangleImage
-        }
-        else if temp == "Golden Ratio"
-        {
-            listImage = data.goldenRatioImage
-        }
-        let yourImage: UIImage = UIImage(named: listImage)!
-        referencesImage.image = yourImage
-    }
-    
-    func changeVideo()
-    {
-        var videoLink = data.ruleOfThirdVideo
-        if temp == "Rule of Thirds"
-        {
-            videoLink = data.ruleOfThirdVideo
-        }
-        else if temp == "Symetry"
-        {
-            videoLink = data.symetryVideo
-        }
-        else if temp == "Triangle Ratio"
-        {
             videoLink = data.goldenTriangleVideo
         }
         else if temp == "Golden Ratio"
         {
+            overviewContent.text = data.goldenRatioOverview
+            listImage = data.goldenRatioImage
             videoLink = data.goldenRatioVideo
         }
+        let yourImage: UIImage = UIImage(named: listImage)!
+        referencesImage.image = yourImage
         
         playerView.load(withVideoId: videoLink)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+//    {
+//        
+//        if let CameraController = segue.destination as? CameraViewController
+//        {
+//            CameraController.courseId = courseDetailId
+//        }
+//    }
+//    
+//    @IBAction func practiceButton(_ sender: UIButton)
+//    {
+//        performSegue(withIdentifier: "cameraSegue", sender: UIButton.self)
+//    }
+    
+    
+//    func changeLabel()
+//    {
+//        if temp == "Rule of Thirds"
+//        {
+//            overviewContent.text = data.ruleOfThirdOverview
+//        }
+//        //overviewContent.text = "Title"
+//        else if temp == "Symetry"
+//        {
+//            overviewContent.text = "Simetris"
+//        }
+//        else if temp == "Triangle Ratio"
+//        {
+//            overviewContent.text = "Segitiga"
+//        }
+//        else if temp == "Golden Ratio"
+//        {
+//            overviewContent.text = "Emas"
+//        }
+//    }
+//
+//    func addImageToImageView()
+//    {
+//        var listImage = data.ruleOfThirdImage
+//        if temp == "Rule of Thirds"
+//        {
+//            listImage = data.ruleOfThirdImage
+//        }
+//        else if temp == "Symetry"
+//        {
+//            listImage = data.symetryImage
+//        }
+//        else if temp == "Triangle Ratio"
+//        {
+//            listImage = data.goldenTriangleImage
+//        }
+//        else if temp == "Golden Ratio"
+//        {
+//            listImage = data.goldenRatioImage
+//        }
+//        let yourImage: UIImage = UIImage(named: listImage)!
+//        referencesImage.image = yourImage
+//    }
+//
+//    func changeVideo()
+//    {
+//        var videoLink = data.ruleOfThirdVideo
+//        if temp == "Rule of Thirds"
+//        {
+//            videoLink = data.ruleOfThirdVideo
+//        }
+//        else if temp == "Symetry"
+//        {
+//            videoLink = data.symetryVideo
+//        }
+//        else if temp == "Triangle Ratio"
+//        {
+//            videoLink = data.goldenTriangleVideo
+//        }
+//        else if temp == "Golden Ratio"
+//        {
+//            videoLink = data.goldenRatioVideo
+//        }
+//
+//        playerView.load(withVideoId: videoLink)
+//    }
 }
