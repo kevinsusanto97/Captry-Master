@@ -404,7 +404,7 @@
         <image name="RuleOfThirdGrid" width="335" height="250"/>
         <image name="courseList1" width="367" height="179"/>
         <image name="flashBtn" width="166.66667175292969" height="275.33334350585938"/>
-        <image name="gridBtn" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="gridBtn" width="49" height="49"/>
         <image name="shutter" width="250" height="250"/>
         <image name="warning" width="18" height="16"/>
     </resources>
