@@ -11,12 +11,16 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     let courseName = ["Rule of Thirds","Symetry","Triangle Ratio", "Golden Ratio"]
     let courseThumb = [UIImage(named: "courseList1"),UIImage(named: "courseList2"),UIImage(named: "courseList3"),UIImage(named: "courseList4")]
+    var selectedCourse: String = ""
     
+    @IBOutlet var titleBox: UIView!
+    
+    @IBOutlet var collectionViewOutlet: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+        titleStyle()
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -29,8 +33,32 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.courseImageView.image = courseThumb[indexPath.row]
         cell.courseLabel.text = courseName[indexPath.row]
         
-        
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = false
+        cell.layer.shadowOpacity = 0.25
+        cell.layer.shadowRadius = 20
+    
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedCourse = courseName[indexPath.row]
+        performSegue(withIdentifier: "courseDetailSegue", sender: courseName[indexPath.row])
+//        print(selectedCourse)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let CourseDetailController = segue.destination as? CourseDetailViewController
+        {
+            CourseDetailController.temp = sender as? String
+        }
+    }
+    
+    func titleStyle() {
+        titleBox.layer.cornerRadius = 10
+        titleBox.layer.shadowOpacity = 0.5
+        titleBox.layer.shadowRadius = 20
     }
     
     
@@ -44,13 +72,5 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    @IBAction func CourseTappedAction(_ sender: Any) {
-        performSegue(withIdentifier: "courseDetail", sender: nil)
-    }
-    
-    
-    
-    
-
 }
 
