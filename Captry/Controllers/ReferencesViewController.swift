@@ -14,6 +14,9 @@ class ReferencesViewController: UIViewController, UICollectionViewDataSource, UI
                          UIImage(named: "RuleOfThirds2"),
                          UIImage(named: "RuleOfThirds3"),
                          UIImage(named: "RuleOfThirds4")]
+    
+    // For imageViewer(1)
+    let viewImageSegueidentifier = "viewImageSegueidentifier"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +25,19 @@ class ReferencesViewController: UIViewController, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageReferences.count
     }
+     // For imageViewer(3)
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let item = sender as! UIImage
+//        if segue.identifier == viewImageSegueidentifier{
+//            if let vc = segue.destination as? ImageViewerViewController{
+//                vc.imageName = item
+//            }
+//        }
+//    }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ReferencesCollectionViewCell
         cell.imageReferences.image = imageReferences[indexPath.row]
         
@@ -41,10 +55,11 @@ class ReferencesViewController: UIViewController, UICollectionViewDataSource, UI
         cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         
         
-        
-        
-        
         return cell
-        
     }
+//    // For imageViewer(2)
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let item = imageReferences(indexPath.item)
+//        performSegue(withIdentifier: viewImageSegueidentifier, sender: item)
+//    }
 }

@@ -286,10 +286,42 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2BT-PH-ifX"/>
                     </view>
+                    <connections>
+                        <segue destination="2gV-hl-HBR" kind="show" identifier="viewImageSegueidentifier" id="kfL-Na-yMW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o57-75-7z3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2611.594202898551" y="-322.09821428571428"/>
+        </scene>
+        <!--Image Viewer View Controller-->
+        <scene sceneID="giR-lQ-7x3">
+            <objects>
+                <viewController id="2gV-hl-HBR" customClass="ImageViewerViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w4b-FF-u9u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Xo-ii-zFi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Xo-ii-zFi" firstAttribute="top" secondItem="A91-yS-M46" secondAttribute="top" id="HYW-XC-dW6"/>
+                            <constraint firstItem="9Xo-ii-zFi" firstAttribute="leading" secondItem="A91-yS-M46" secondAttribute="leading" id="Jo4-1a-pGM"/>
+                            <constraint firstItem="9Xo-ii-zFi" firstAttribute="trailing" secondItem="A91-yS-M46" secondAttribute="trailing" id="Mvb-7Q-sbb"/>
+                            <constraint firstAttribute="bottom" secondItem="9Xo-ii-zFi" secondAttribute="bottom" id="UlM-5i-CPr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A91-yS-M46"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="9Xo-ii-zFi" id="V8d-Sl-3ge"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kH-oJ-JDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3315.9420289855075" y="-322.09821428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qca-9N-RfN">
