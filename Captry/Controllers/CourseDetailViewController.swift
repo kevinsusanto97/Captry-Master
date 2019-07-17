@@ -16,6 +16,7 @@ class CourseDetailViewController: UIViewController {
     @IBOutlet weak var overviewContent: UILabel!
     @IBOutlet weak var playerView: WKYTPlayerView!
     @IBOutlet weak var referencesImage: UIImageView!
+    @IBOutlet weak var seeMoreButton: UIButton!
     
     var temp: String?
     
@@ -33,6 +34,17 @@ class CourseDetailViewController: UIViewController {
     
     @IBAction func goToPractice(_ sender: Any) {
      performSegue(withIdentifier: "practiceSegue", sender: temp)
+    }
+    
+    @IBAction func seeMoreAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "referencesIdentifier", sender: "Reference")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let ReferenceView = segue.destination as? ReferencesViewController
+        {
+            ReferenceView.course = sender as? String
+        }
     }
     
     func changeView()
