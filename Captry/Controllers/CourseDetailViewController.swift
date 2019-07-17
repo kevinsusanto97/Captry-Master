@@ -38,13 +38,7 @@ class CourseDetailViewController: UIViewController {
     @IBAction func seeMoreAction(_ sender: UIButton) {
         performSegue(withIdentifier: "referencesIdentifier", sender: "Reference")
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let ReferenceView = segue.destination as? ReferencesViewController
-        {
-            ReferenceView.course = sender as? String
-        }
-    }
+
     
     func changeView()
     {
@@ -142,6 +136,10 @@ class CourseDetailViewController: UIViewController {
         if let CameraViewController = segue.destination as? CameraViewController
         {
             CameraViewController.temp = sender as? String
+        }
+        else if let ReferencesViewController = segue.destination as? ReferencesViewController
+        {
+             ReferencesViewController.course = sender as? String
         }
     }
 }
