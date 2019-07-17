@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4EB5224922DDFC910055D451 /* CoursesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5224822DDFC910055D451 /* CoursesData.swift */; };
+		51363A7722DF0E3E00E63D3B /* CustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51363A7622DF0E3E00E63D3B /* CustomUI.swift */; };
 		5179B4D622D857C200C35257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179B4D522D857C200C35257 /* AppDelegate.swift */; };
 		5179B4D822D857C200C35257 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179B4D722D857C200C35257 /* ViewController.swift */; };
 		5179B4DB22D857C200C35257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5179B4D922D857C200C35257 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		3B0CC4DA33EE4EBB2C2BDB57 /* Pods-Captry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Captry.debug.xcconfig"; path = "Target Support Files/Pods-Captry/Pods-Captry.debug.xcconfig"; sourceTree = "<group>"; };
 		4EB5224822DDFC910055D451 /* CoursesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesData.swift; sourceTree = "<group>"; };
+		51363A7622DF0E3E00E63D3B /* CustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUI.swift; sourceTree = "<group>"; };
 		5179B4D222D857C200C35257 /* Captry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Captry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5179B4D522D857C200C35257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5179B4D722D857C200C35257 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				5179B4D922D857C200C35257 /* Main.storyboard */,
+				51363A7622DF0E3E00E63D3B /* CustomUI.swift */,
 				517EF9F622DC87A40014CE6C /* CollectionViewCell.swift */,
 			);
 			path = Views;
@@ -250,6 +253,7 @@
 			files = (
 				D4446DE422D89A5700A4CD24 /* CourseDetailViewController.swift in Sources */,
 				5179B4ED22D8702200C35257 /* Course List Style.swift in Sources */,
+				51363A7722DF0E3E00E63D3B /* CustomUI.swift in Sources */,
 				B0CF518822DC667B0090A1A6 /* ResultViewController.swift in Sources */,
 				517EF9F722DC87A40014CE6C /* CollectionViewCell.swift in Sources */,
 				5179B4D822D857C200C35257 /* ViewController.swift in Sources */,
