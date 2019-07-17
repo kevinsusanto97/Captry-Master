@@ -31,6 +31,10 @@ class CourseDetailViewController: UIViewController {
         addImageToImageView()
     }
     
+    @IBAction func goToPractice(_ sender: Any) {
+     performSegue(withIdentifier: "practiceSegue", sender: temp)
+    }
+    
     func changeView()
     {
         var listImage = data.ruleOfThirdImage
@@ -121,5 +125,12 @@ class CourseDetailViewController: UIViewController {
         }
         
         playerView.load(withVideoId: videoLink)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let CameraViewController = segue.destination as? CameraViewController
+        {
+            CameraViewController.temp = sender as? String
+        }
     }
 }
