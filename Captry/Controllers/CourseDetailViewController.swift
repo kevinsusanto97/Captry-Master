@@ -12,13 +12,18 @@ import YoutubePlayer_in_WKWebView
 
 class CourseDetailViewController: UIViewController {
 
+    @IBOutlet var titlePopup: UILabel!
+    @IBOutlet var popupView: UIView!
+    @IBOutlet var dimView: UIView!
+    
+    
+    
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var overviewContent: UILabel!
     @IBOutlet weak var playerView: WKYTPlayerView!
     @IBOutlet weak var referencesImage: UIImageView!
     
     var temp: String?
-    
     var data = CoursesData()
     
     override func viewDidLoad() {
@@ -29,7 +34,40 @@ class CourseDetailViewController: UIViewController {
         changeLabel()
         changeVideo()
         addImageToImageView()
+        
+        popupView.layer.cornerRadius = 10
+        
     }
+    
+    
+    
+    
+    func animateIn() {
+        self.view.addSubview(popupView)
+        popupView.center = self.view.center
+        
+        popupView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        popupView.alpha = 0
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            self.dimView.alpha = 0.8
+            self.popupView.alpha = 1
+            self.popupView.transform = CGAffineTransform.identity
+            
+        })
+    }
+    
+    
+    
+    @IBAction func showGuidesBtn(_ sender: UIButton) {
+        animateIn()
+        
+    }
+    @IBAction func closePopUpBtn(_ sender: UIButton) {
+    }
+    
+    
+    
     
     func changeView()
     {
@@ -123,3 +161,5 @@ class CourseDetailViewController: UIViewController {
         playerView.load(withVideoId: videoLink)
     }
 }
+
+
