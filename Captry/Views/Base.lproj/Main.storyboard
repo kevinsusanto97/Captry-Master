@@ -363,13 +363,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m55-9v-Gs9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2922" y="-1025"/>
+            <point key="canvasLocation" x="2893" y="-793"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qca-9N-RfN">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hrh-7f-gpF" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9bT-Wo-I9P">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -397,6 +398,6 @@
         <image name="warning" width="18" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="V56-XB-Y8h"/>
+        <segue reference="rj1-gi-Rfb"/>
     </inferredMetricsTieBreakers>
 </document>
