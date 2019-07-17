@@ -12,6 +12,7 @@ import AVFoundation
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     let captureSession = AVCaptureSession()
+    var temp : String?
     
     @IBOutlet var focusRect: UIImageView!
     var previewLayer:CALayer!
@@ -39,10 +40,30 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         super.viewDidLoad()
         //step 1 bikin gesture
         focusRect.alpha = 0
+        loadGrid()
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinch(sender:)))
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(focus(sender:)))
         cameraView.addGestureRecognizer(tapGesture)
         cameraView.addGestureRecognizer(pinchGesture)
+    }
+    
+    func loadGrid(){
+        if temp == "Rule of Thirds"
+        {
+            gridView.image = UIImage(named: "RuleOfThirdGrid")
+        }
+        else if temp == "Symetry"
+        {
+            gridView.image = UIImage(named: "SymmetryGrid")
+        }
+        else if temp == "Triangle Ratio"
+        {
+            gridView.image = UIImage(named: "GoldenTriangleGrid")
+        }
+        else if temp == "Golden Ratio"
+        {
+            gridView.image = UIImage(named: "GoldenRatioGrid")
+        }
     }
     
     @objc func focus(sender:UITapGestureRecognizer){
