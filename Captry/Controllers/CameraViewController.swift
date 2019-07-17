@@ -13,6 +13,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 
     let captureSession = AVCaptureSession()
     
+    @IBOutlet var focusRect: UIImageView!
     var previewLayer:CALayer!
     var captureDevice:AVCaptureDevice!
     @IBOutlet var flashOutlet: UIButton!
@@ -37,8 +38,56 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     override func viewDidLoad() {
         super.viewDidLoad()
         //step 1 bikin gesture
+        focusRect.alpha = 0
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinch(sender:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(focus(sender:)))
+        cameraView.addGestureRecognizer(tapGesture)
         cameraView.addGestureRecognizer(pinchGesture)
+    }
+    
+    @objc func focus(sender:UITapGestureRecognizer){
+        if (sender.state == .ended) {
+            let thisFocusPoint = sender.location(in: cameraView)
+            
+            print("touch to focus", thisFocusPoint)
+            
+            let focus_x = thisFocusPoint.x / cameraView.frame.size.width
+            let focus_y = thisFocusPoint.y / cameraView.frame.size.height
+            
+            focusRect!.center = CGPoint(x: (thisFocusPoint.x+150), y: thisFocusPoint.y)
+            
+            UIView.animate(withDuration: 1, animations: {
+                self.focusRect.alpha = 1.0
+                self.focusRect.alpha = 0.5
+                self.focusRect.alpha = 1.0
+                self.focusRect.alpha = 0.5
+                self.focusRect.alpha = 1.0
+                self.focusRect.alpha = 0.5
+            }, completion: { (finished) in
+                if finished{
+                self.focusRect.alpha = 0.5
+                }
+            })
+            
+            if (captureDevice!.isFocusModeSupported(.autoFocus) && captureDevice!.isFocusPointOfInterestSupported) {
+                do {
+                    try captureDevice?.lockForConfiguration()
+                    captureDevice?.focusMode = .autoFocus
+                    captureDevice?.focusPointOfInterest = CGPoint(x: focus_x, y: focus_y)
+                    
+                    if (captureDevice!.isExposureModeSupported(.autoExpose) && captureDevice!.isExposurePointOfInterestSupported) {
+                        captureDevice?.exposureMode = .autoExpose;
+                        captureDevice?.exposurePointOfInterest = CGPoint(x: focus_x, y: focus_y);
+                        
+                        
+                    }
+                    
+                    captureDevice?.unlockForConfiguration()
+                } catch {
+                    print(error)
+                }
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,6 +136,11 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
     
     func beginSession(){
+    if(captureDevice!.isFocusModeSupported(.continuousAutoFocus)) {
+            try! captureDevice!.lockForConfiguration()
+            captureDevice!.focusMode = .continuousAutoFocus
+            captureDevice!.unlockForConfiguration()
+        }
         do {
             let captureDeviceInput = try AVCaptureDeviceInput(device: captureDevice)
             captureSession.addInput(captureDeviceInput)
@@ -186,13 +240,20 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     @IBAction func flashButton(_ sender: Any) {
         if isUsingFlash == false {
             flashOutlet.isSelected = true
-        flashOutlet.setImage(UIImage(named: "flashOn"), for: .selected)
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                self.flashOutlet.setImage(UIImage(named: "flashOn"), for: .selected)
+            })
             
             flashOn(device: captureDevice)
             isUsingFlash = true
         }else{
            flashOutlet.isSelected = false
-        flashOutlet.setImage(UIImage(named: "flashBtn"), for: .normal)
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                self.flashOutlet.setImage(UIImage(named: "flashBtn"), for: .normal)
+            })
+            
             flashOff(device: captureDevice)
             isUsingFlash = false
         }
