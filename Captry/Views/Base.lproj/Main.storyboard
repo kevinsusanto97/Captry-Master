@@ -222,10 +222,6 @@
                                 <rect key="frame" x="144" y="0.0" width="551" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FocusRect" translatesAutoresizingMaskIntoConstraints="NO" id="XI8-eh-Rfs">
-                                <rect key="frame" x="376" y="166" width="87" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kwz-Fy-s9g">
                                 <rect key="frame" x="0.0" y="0.0" width="144" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -260,6 +256,10 @@
                                     <action selector="flashButton:" destination="Ujc-gz-Tyr" eventType="touchUpInside" id="d62-cS-mwq"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FocusRect" translatesAutoresizingMaskIntoConstraints="NO" id="XI8-eh-Rfs">
+                                <rect key="frame" x="374" y="162" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xaN-OV-i6k"/>
