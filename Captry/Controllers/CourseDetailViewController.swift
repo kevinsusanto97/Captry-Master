@@ -35,14 +35,19 @@ class CourseDetailViewController: UIViewController {
         changeLabel()
         changeVideo()
         addImageToImageView()
-        
         popupView.layer.cornerRadius = 10
-        
+        maskVideo()
     }
     
     @IBAction func goToPractice(_ sender: Any) {
      performSegue(withIdentifier: "practiceSegue", sender: temp)
     }
+    
+    func maskVideo() {
+        self.playerView.layer.masksToBounds = true
+        self.playerView.layer.cornerRadius = 10
+    }
+    
     
     @IBAction func seeMoreAction(_ sender: UIButton) {
         performSegue(withIdentifier: "referencesIdentifier", sender: "Reference")
