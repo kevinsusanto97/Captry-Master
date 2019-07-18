@@ -35,19 +35,19 @@ class CourseDetailViewController: UIViewController {
     @IBAction func goToPractice(_ sender: Any) {
      performSegue(withIdentifier: "practiceSegue", sender: temp)
     }
+    
     @IBAction func seeMoreAction(_ sender: UIButton) {
         performSegue(withIdentifier: "referencesIdentifier", sender: "Reference")
     }
 
-    
-    @IBAction func seeMoreAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "referencesIdentifier", sender: "Reference")
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let ReferenceView = segue.destination as? ReferencesViewController
+        if let CameraViewController = segue.destination as? CameraViewController
         {
-            ReferenceView.course = sender as? String
+            CameraViewController.temp = sender as? String
+        }
+        else if let ReferencesViewController = segue.destination as? ReferencesViewController
+        {
+            ReferencesViewController.course = sender as? String
         }
     }
     
@@ -141,16 +141,5 @@ class CourseDetailViewController: UIViewController {
         }
         
         playerView.load(withVideoId: videoLink)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let CameraViewController = segue.destination as? CameraViewController
-        {
-            CameraViewController.temp = sender as? String
-        }
-        else if let ReferencesViewController = segue.destination as? ReferencesViewController
-        {
-             ReferencesViewController.course = sender as? String
-        }
     }
 }
