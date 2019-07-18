@@ -61,7 +61,7 @@ class CourseDetailViewController: UIViewController {
     
     
     
-    
+    //POP UP GUIDES
     func animateIn() {
         self.view.addSubview(popupView)
         popupView.center = self.view.center
@@ -70,10 +70,18 @@ class CourseDetailViewController: UIViewController {
         popupView.alpha = 0
         
         UIView.animate(withDuration: 0.4, animations: {
-            self.dimView.alpha = 0.8
+            self.dimView.isHidden = false
+            self.dimView.alpha = 0.85
             self.popupView.alpha = 1
             self.popupView.transform = CGAffineTransform.identity
-            
+        })
+    }
+    func animateOut() {
+        self.view.addSubview(popupView)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.popupView.transform = CGAffineTransform.init(scaleX: 1.2, y: 1.2)
+            self.popupView.alpha = 0
+            self.dimView.alpha = 0
         })
     }
     
@@ -84,6 +92,7 @@ class CourseDetailViewController: UIViewController {
         
     }
     @IBAction func closePopUpBtn(_ sender: UIButton) {
+        animateOut()
     }
     
     
