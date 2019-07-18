@@ -158,9 +158,6 @@
                                                 <rect key="frame" x="26" y="456" width="362" height="195"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="2yP-xX-Lrv" appends="YES" id="LCR-Jp-vxd"/>
-                                                </connections>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HI6-A7-dDK">
                                                 <rect key="frame" x="287" y="605" width="79" height="30"/>
@@ -187,6 +184,9 @@
                                                 <rect key="frame" x="26" y="725" width="173" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Show Guides"/>
+                                                <connections>
+                                                    <action selector="showGuidesBtn:" destination="Dfj-Ca-i5p" eventType="touchUpInside" id="m8m-zz-kyc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47v-9x-cfL" customClass="UIPrimaryButton" customModule="Captry" customModuleProvider="target">
                                                 <rect key="frame" x="215" y="725" width="173" height="60"/>
@@ -217,6 +217,11 @@
                                     <constraint firstItem="ZMe-mV-QmA" firstAttribute="width" secondItem="OI9-u8-jBz" secondAttribute="width" id="fAo-kb-A0V"/>
                                 </constraints>
                             </scrollView>
+                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NSD-8e-DU7">
+                                <rect key="frame" x="0.0" y="-7" width="414" height="903"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -230,18 +235,41 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="dimView" destination="NSD-8e-DU7" id="mCv-AE-O9c"/>
                         <outlet property="overviewContent" destination="KCi-Ln-x1X" id="jYa-Sn-PS7"/>
                         <outlet property="overviewLabel" destination="5VM-fm-ECK" id="x9M-iU-3RY"/>
                         <outlet property="playerView" destination="uAY-G1-QaR" id="LKC-yG-dMh"/>
+                        <outlet property="popupView" destination="hFx-bP-xc8" id="Fj9-bc-C4P"/>
                         <outlet property="referencesImage" destination="1Fg-Av-7Eb" id="uQQ-ob-f07"/>
                         <outlet property="seeMoreButton" destination="HI6-A7-dDK" id="pzp-Uo-c70"/>
                         <segue destination="aUl-ax-vJG" kind="show" identifier="referencesIdentifier" id="WUB-P6-R7Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2IW-GR-dZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="2yP-xX-Lrv"/>
+                <view contentMode="scaleToFill" id="hFx-bP-xc8">
+                    <rect key="frame" x="0.0" y="0.0" width="350" height="605"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to get started?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbp-lo-ZbD">
+                            <rect key="frame" x="16" y="32" width="318" height="42"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxO-dE-ec7" customClass="UIPrimaryButton" customModule="Captry" customModuleProvider="target">
+                            <rect key="frame" x="52" y="519" width="246" height="52"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Done"/>
+                            <connections>
+                                <action selector="closePopUpBtn:" destination="Dfj-Ca-i5p" eventType="touchUpInside" id="zLY-a9-Y73"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="GHD-fk-jcV"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="1751" y="-15"/>
+            <point key="canvasLocation" x="1750.7246376811595" y="-15.401785714285714"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="9a3-Hc-2zp">
@@ -385,10 +413,11 @@
         <!--Navigation Controller-->
         <scene sceneID="qca-9N-RfN">
             <objects>
-                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hrh-7f-gpF" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hrh-7f-gpF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9bT-Wo-I9P">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="largeTitleTextAttributes">
