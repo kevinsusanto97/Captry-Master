@@ -20,7 +20,10 @@
 		7F9B743C313C1B278C6DD173 /* Pods_Captry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F371B0B5870DBF19456F0B2 /* Pods_Captry.framework */; };
 		B0CF518622DC66530090A1A6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF518522DC66530090A1A6 /* CameraViewController.swift */; };
 		B0CF518822DC667B0090A1A6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF518722DC667B0090A1A6 /* ResultViewController.swift */; };
+		B0E076E622DF1524004D391D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E076E522DF1524004D391D /* RoundedButton.swift */; };
 		D4446DE422D89A5700A4CD24 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4446DE322D89A5700A4CD24 /* CourseDetailViewController.swift */; };
+		EF1FE5DF22DF2164003C31D1 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1FE5DE22DF2164003C31D1 /* ReferencesViewController.swift */; };
+		EF1FE5E122DF2272003C31D1 /* ReferencesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1FE5E022DF2272003C31D1 /* ReferencesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +43,10 @@
 		6F371B0B5870DBF19456F0B2 /* Pods_Captry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Captry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CF518522DC66530090A1A6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B0CF518722DC667B0090A1A6 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B0E076E522DF1524004D391D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		D4446DE322D89A5700A4CD24 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
+		EF1FE5DE22DF2164003C31D1 /* ReferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
+		EF1FE5E022DF2272003C31D1 /* ReferencesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F243580E3D1F823EB24CE7A6 /* Pods-Captry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Captry.release.xcconfig"; path = "Target Support Files/Pods-Captry/Pods-Captry.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +127,7 @@
 				5179B4D922D857C200C35257 /* Main.storyboard */,
 				51363A7622DF0E3E00E63D3B /* CustomUI.swift */,
 				517EF9F622DC87A40014CE6C /* CollectionViewCell.swift */,
+				B0E076E522DF1524004D391D /* RoundedButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +139,8 @@
 				D4446DE322D89A5700A4CD24 /* CourseDetailViewController.swift */,
 				B0CF518522DC66530090A1A6 /* CameraViewController.swift */,
 				B0CF518722DC667B0090A1A6 /* ResultViewController.swift */,
+				EF1FE5DE22DF2164003C31D1 /* ReferencesViewController.swift */,
+				EF1FE5E022DF2272003C31D1 /* ReferencesCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,11 +264,14 @@
 				5179B4ED22D8702200C35257 /* Course List Style.swift in Sources */,
 				51363A7722DF0E3E00E63D3B /* CustomUI.swift in Sources */,
 				B0CF518822DC667B0090A1A6 /* ResultViewController.swift in Sources */,
+				EF1FE5DF22DF2164003C31D1 /* ReferencesViewController.swift in Sources */,
 				517EF9F722DC87A40014CE6C /* CollectionViewCell.swift in Sources */,
 				5179B4D822D857C200C35257 /* ViewController.swift in Sources */,
+				B0E076E622DF1524004D391D /* RoundedButton.swift in Sources */,
 				5179B4D622D857C200C35257 /* AppDelegate.swift in Sources */,
 				4EB5224922DDFC910055D451 /* CoursesData.swift in Sources */,
 				5179B4DE22D857C200C35257 /* Captry.xcdatamodeld in Sources */,
+				EF1FE5E122DF2272003C31D1 /* ReferencesCollectionViewCell.swift in Sources */,
 				B0CF518622DC66530090A1A6 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,7 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MX4GSTN68K;
+				DEVELOPMENT_TEAM = FN97V72AGN;
 				INFOPLIST_FILE = Captry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -427,7 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MX4GSTN68K;
+				DEVELOPMENT_TEAM = FN97V72AGN;
 				INFOPLIST_FILE = Captry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

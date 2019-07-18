@@ -22,6 +22,7 @@ class CourseDetailViewController: UIViewController {
     @IBOutlet weak var overviewContent: UILabel!
     @IBOutlet weak var playerView: WKYTPlayerView!
     @IBOutlet weak var referencesImage: UIImageView!
+    @IBOutlet weak var seeMoreButton: UIButton!
     
     var temp: String?
     var data = CoursesData()
@@ -37,6 +38,25 @@ class CourseDetailViewController: UIViewController {
         
         popupView.layer.cornerRadius = 10
         
+    }
+    
+    @IBAction func goToPractice(_ sender: Any) {
+     performSegue(withIdentifier: "practiceSegue", sender: temp)
+    }
+    
+    @IBAction func seeMoreAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "referencesIdentifier", sender: "Reference")
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let CameraViewController = segue.destination as? CameraViewController
+        {
+            CameraViewController.temp = sender as? String
+        }
+        else if let ReferencesViewController = segue.destination as? ReferencesViewController
+        {
+            ReferencesViewController.course = sender as? String
+        }
     }
     
     
