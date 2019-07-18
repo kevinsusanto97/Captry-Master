@@ -10,16 +10,22 @@ import UIKit
 
 class ReferencesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     // Dummy images references
-    let imageReferences = [UIImage(named: "courseList1"),
+    var imageReferences = [UIImage(named: "courseList1"),
                            UIImage(named: "courseList1"),
                            UIImage(named: "courseList1"),
                            UIImage(named: "courseList1")]
     
     var course: String?
     
+    var referencesData = CoursesData()
+    
+    var selectedReferences: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = course
+        changeReferencesView()
+        print(course)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,5 +53,37 @@ class ReferencesViewController: UIViewController, UICollectionViewDataSource, UI
         
         
         return cell
+    }
+    
+    func changeReferencesView()
+    {
+        if course == "Rule of Thirds"
+        {
+            imageReferences[0] = UIImage(named: referencesData.ruleOfThirdReferences1)
+            imageReferences[1] = UIImage(named: referencesData.ruleOfThirdReferences2)
+            imageReferences[2] = UIImage(named: referencesData.ruleOfThirdReferences3)
+            imageReferences[3] = UIImage(named: referencesData.ruleOfThirdReferences4)
+        }
+        else if course == "Symetry"
+        {
+            imageReferences = [UIImage(named: referencesData.symetryReferences1),
+                               UIImage(named: referencesData.symetryReferences2),
+                               UIImage(named: referencesData.symetryReferences3),
+                               UIImage(named: referencesData.symetryReferences4)]
+        }
+        else if course == "Triangle Ratio"
+        {
+            imageReferences[0] = UIImage(named: referencesData.goldenTriangleReferences1)
+            imageReferences[1] = UIImage(named: referencesData.goldenTriangleReferences2)
+            imageReferences[2] = UIImage(named: referencesData.goldenTriangleReferences3)
+            imageReferences[3] = UIImage(named: referencesData.goldenTriangleReferences4)
+        }
+        else if course == "Golden Ratio"
+        {
+            imageReferences[0] = UIImage(named: referencesData.goldenRatioReferences1)
+            imageReferences[1] = UIImage(named: referencesData.goldenRatioReferences2)
+            imageReferences[2] = UIImage(named: referencesData.goldenRatioReferences3)
+            imageReferences[3] = UIImage(named: referencesData.goldenRatioReferences4)
+        }
     }
 }
