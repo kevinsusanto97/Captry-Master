@@ -9,6 +9,7 @@
 import UIKit
 
 class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
+    @IBOutlet weak var skipButton: UIButton!
     
     @IBOutlet weak var scrollView: UIScrollView!{
         didSet{
@@ -104,13 +105,18 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
          */
         let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
         
-        if(percentOffset.x > 0 && percentOffset.x <= 0.5) {
-            slides[0].imageView.transform = CGAffineTransform(scaleX: (0.5-percentOffset.x)/0.5, y: (0.5-percentOffset.x)/0.5)
-            slides[1].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.5, y: percentOffset.x/0.5)
-        } else if(percentOffset.x > 0.5 && percentOffset.x <= 1) {
-            
-            slides[1].imageView.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.5, y: (1-percentOffset.x)/0.5)
-            slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
+        if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
+            slides[0].imageView.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
+            slides[1].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.25, y: percentOffset.x/0.25)
+        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
+            slides[1].imageView.transform = CGAffineTransform(scaleX: (0.50+percentOffset.x), y: (0.50+percentOffset.x))
+            slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
+            skipButton.setTitle("Skip", for: UIControl.State.normal)
+            skipButton.frame = CGRect(x: 364, y: 44, width: 30, height: 30)
+        } else if(percentOffset.x > 0.50 && percentOffset.x <= 1) {
+            skipButton.setTitle("Let's Start", for: UIControl.State.normal)
+            skipButton.frame = CGRect(x: 304, y: 44, width: 90, height: 30)
+            slides[2].imageView.transform = CGAffineTransform(scaleX: (0.5+percentOffset.x), y: (0.5+percentOffset.x))
         }
         
         
