@@ -40,16 +40,16 @@ class CourseDetailViewController: UIViewController {
     }
 
     
-    @IBAction func seeMoreAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "referencesIdentifier", sender: "Reference")
-    }
+//    @IBAction func seeMoreAction(_ sender: UIButton) {
+//        performSegue(withIdentifier: "referencesIdentifier", sender: "Reference")
+//    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let ReferenceView = segue.destination as? ReferencesViewController
-        {
-            ReferenceView.course = sender as? String
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let ReferenceView = segue.destination as? ReferencesViewController
+//        {
+//            ReferenceView.course = sender as? String
+//        }
+//    }
     
     func changeView()
     {
