@@ -10,8 +10,8 @@ import UIKit
 
 class ReferencesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     // Dummy images references
-    let imageReferences = [UIImage(named: "courseList1"),
-                           UIImage(named: "courseList1"),
+    let imageReferences = [UIImage(named: "ruleofthirdsample-1"),
+                           UIImage(named: "ruleofthirdsample-2"),
                            UIImage(named: "courseList1"),
                            UIImage(named: "courseList1")]
     
@@ -44,7 +44,6 @@ class ReferencesViewController: UIViewController, UICollectionViewDataSource, UI
         cell.layer.shadowOpacity = 1.0
         cell.layer.masksToBounds = false
         cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
-        
         
         return cell
     }
