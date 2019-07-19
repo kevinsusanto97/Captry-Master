@@ -39,18 +39,21 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
     
     func createSlides() -> [Slide] {
         
-        let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide1.imageView.image = UIImage(named: "sampleImage")
+        let slide1:Slide = Bundle.main.loadNibNamed("SlideNew", owner: self, options: nil)?.first as! Slide
+        slide1.imageView.image = UIImage(named: "onboarding_1")
+        slide1.backgroundImageView.image = UIImage(named: "background")
         slide1.labelTitle.text = "All-in-One Learning"
         slide1.labelDesc.text = "Belajar teori dan praktek komposisi fotografi dalam satu aplikasi"
         
-        let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide2.imageView.image = UIImage(named: "sampleImage")
+        let slide2:Slide = Bundle.main.loadNibNamed("SlideNew", owner: self, options: nil)?.first as! Slide
+        slide2.imageView.image = UIImage(named: "onboarding_2")
+        slide2.backgroundImageView.image = UIImage(named: "background_2")
         slide2.labelTitle.text = "Improve Creativity"
         slide2.labelDesc.text = "Dapatkan inspirasi dari koleksi foto dan bereksperimen dengannya"
         
-        let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide3.imageView.image = UIImage(named: "sampleImage")
+        let slide3:Slide = Bundle.main.loadNibNamed("SlideNew", owner: self, options: nil)?.first as! Slide
+        slide3.imageView.image = UIImage(named: "onboarding_3")
+        slide3.backgroundImageView.image = UIImage(named: "background_3")
         slide3.labelTitle.text = "Simple Guideline"
         slide3.labelDesc.text = "Mudah mengaktifkan/menonaktifkan grid saat mengambil foto"
         
@@ -154,3 +157,19 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
     }
 }
 
+extension NSMutableAttributedString {
+    @discardableResult func bold(_ text: String) -> NSMutableAttributedString {
+        let attrs: [NSAttributedString.Key: Any] = [.font: UIFont(name: "AvenirNext-Medium", size: 12)!]
+        let boldString = NSMutableAttributedString(string:text, attributes: attrs)
+        append(boldString)
+        
+        return self
+    }
+    
+    @discardableResult func normal(_ text: String) -> NSMutableAttributedString {
+        let normal = NSAttributedString(string: text)
+        append(normal)
+        
+        return self
+    }
+}
