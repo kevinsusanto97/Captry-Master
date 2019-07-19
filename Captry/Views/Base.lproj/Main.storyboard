@@ -118,7 +118,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OI9-u8-jBz">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMe-mV-QmA">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="785"/>
@@ -330,7 +330,7 @@
                                     <color key="titleColor" red="1" green="0.28062454380000001" blue="0.0" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Dfj-Ca-i5p" kind="presentation" id="gVx-nG-LWA"/>
+                                    <action selector="goBack:" destination="Ujc-gz-Tyr" eventType="touchUpInside" id="Ig7-U6-VhR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k43-Uf-Yif">
@@ -350,11 +350,12 @@
                         <outlet property="flashOutlet" destination="k43-Uf-Yif" id="Ytd-1k-9Lc"/>
                         <outlet property="focusRect" destination="XI8-eh-Rfs" id="lig-5F-kJd"/>
                         <outlet property="gridView" destination="baa-jD-tm0" id="UfL-Ut-5Sg"/>
+                        <segue destination="Dfj-Ca-i5p" kind="presentation" identifier="goBackSegue" id="efM-Kw-PLK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qB0-Fa-Soq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2490.4017857142858" y="863.768115942029"/>
+            <point key="canvasLocation" x="1793" y="938"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="ZUI-FI-1Sb">
@@ -550,6 +551,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="V56-XB-Y8h"/>
-        <segue reference="Clx-ls-Huk"/>
+        <segue reference="efM-Kw-PLK"/>
     </inferredMetricsTieBreakers>
 </document>

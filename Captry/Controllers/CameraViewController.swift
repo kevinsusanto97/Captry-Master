@@ -27,8 +27,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     var isGridShowen = true
     var isUsingFlash = false
     
-    var orientationLock = UIInterfaceOrientationMask.all
-    
     @IBOutlet var cameraView: UIView!
     
     @IBOutlet var gridView: UIImageView!
@@ -37,14 +35,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         takePhoto = true
     }
     
-    @IBAction func goBack(_ sender: Any){
-        performSegue(withIdentifier: "backToCourseSegue", sender: self)
-    }
     
-    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        return self.orientationLock
+    @IBAction func goBack(_ sender: Any) {
+    performSegue(withIdentifier: "goBackSegue", sender: self)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
