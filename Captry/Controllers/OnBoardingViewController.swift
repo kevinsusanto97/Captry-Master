@@ -104,19 +104,31 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
          */
         let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
         
-        if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
+        if(percentOffset.x > 0 && percentOffset.x <= 0.5) {
+            slides[0].imageView.transform = CGAffineTransform(scaleX: (0.5-percentOffset.x)/0.5, y: (0.5-percentOffset.x)/0.5)
+            slides[1].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.5, y: percentOffset.x/0.5)
+        } else if(percentOffset.x > 0.5 && percentOffset.x <= 1) {
             
-            slides[0].imageView.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
-            slides[1].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.25, y: percentOffset.x/0.25)
-            
-        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
-            slides[1].imageView.transform = CGAffineTransform(scaleX: (0.50+percentOffset.x), y: (0.50+percentOffset.x))
-            slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
-            
-        } else if(percentOffset.x > 0.50 && percentOffset.x <= 0.75) {
-           
-            slides[2].imageView.transform = CGAffineTransform(scaleX: (0.5+percentOffset.x), y: (0.5+percentOffset.x))
+            slides[1].imageView.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.5, y: (1-percentOffset.x)/0.5)
+            slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
         }
+        
+        
+//        if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
+//            slides[0].imageView.transform = CGAffineTransform(scaleX: (0.5-percentOffset.x)/0.5, y: (0.5-percentOffset.x)/0.5)
+//            slides[1].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.5, y: percentOffset.x/0.5)
+//        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
+//            slides[1].imageView.transform = CGAffineTransform(scaleX: (0.50-percentOffset.x)/0.25, y: (0.50-percentOffset.x)/0.25)
+//            slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
+//
+//        } else if(percentOffset.x > 0.50 && percentOffset.x <= 0.75) {
+//            slides[2].imageView.transform = CGAffineTransform(scaleX: (0.75-percentOffset.x)/0.25, y: (0.75-percentOffset.x)/0.25)
+//            slides[3].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.75, y: percentOffset.x/0.75)
+//
+//        } else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
+//            slides[3].imageView.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
+//            slides[4].imageView.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
+//        }
     }
     
     
@@ -155,22 +167,5 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         
         // return the fade colour
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
-    }
-}
-
-extension NSMutableAttributedString {
-    @discardableResult func bold(_ text: String) -> NSMutableAttributedString {
-        let attrs: [NSAttributedString.Key: Any] = [.font: UIFont(name: "AvenirNext-Medium", size: 12)!]
-        let boldString = NSMutableAttributedString(string:text, attributes: attrs)
-        append(boldString)
-        
-        return self
-    }
-    
-    @discardableResult func normal(_ text: String) -> NSMutableAttributedString {
-        let normal = NSAttributedString(string: text)
-        append(normal)
-        
-        return self
     }
 }
