@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Slide" customModule="Captry" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="QlR-7h-4H9">
+                    <rect key="frame" x="0.0" y="509" width="414" height="387"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zoO-DN-j5G">
+                    <rect key="frame" x="0.0" y="43" width="414" height="624"/>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Winnie the Pooh" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byj-B9-ChP" userLabel="Title">
+                    <rect key="frame" x="22" y="694" width="375" height="38"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="aot-t0-xDk"/>
+                    </constraints>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="32"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Use this technique to make your slides, create your app, in a simple and effective way " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FxR-dB-pyT" userLabel="Description">
+                    <rect key="frame" x="0.0" y="748" width="414" height="94"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name=".SFNSText" family=".SF NS Text" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Byj-B9-ChP" secondAttribute="trailing" constant="17" id="0sB-uv-l52"/>
+                <constraint firstItem="QlR-7h-4H9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="308-qm-OcN"/>
+                <constraint firstAttribute="bottom" secondItem="Byj-B9-ChP" secondAttribute="bottom" constant="164" id="9ey-tP-QOP"/>
+                <constraint firstAttribute="bottom" secondItem="QlR-7h-4H9" secondAttribute="bottom" id="EjV-5L-gWp"/>
+                <constraint firstItem="FxR-dB-pyT" firstAttribute="leading" secondItem="QlR-7h-4H9" secondAttribute="leading" id="KuU-Qe-Bv8"/>
+                <constraint firstAttribute="trailing" secondItem="zoO-DN-j5G" secondAttribute="trailing" id="Peu-l0-zgO"/>
+                <constraint firstItem="Byj-B9-ChP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="22" id="XAJ-L9-p23"/>
+                <constraint firstItem="FxR-dB-pyT" firstAttribute="top" secondItem="Byj-B9-ChP" secondAttribute="bottom" constant="16" id="XlK-Sh-rPL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FxR-dB-pyT" secondAttribute="bottom" constant="20" id="eXw-DJ-KZP"/>
+                <constraint firstAttribute="trailing" secondItem="QlR-7h-4H9" secondAttribute="trailing" id="jpl-5i-YcJ"/>
+                <constraint firstItem="zoO-DN-j5G" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="43" id="mB7-um-uzm"/>
+                <constraint firstItem="Byj-B9-ChP" firstAttribute="top" secondItem="zoO-DN-j5G" secondAttribute="bottom" constant="27" id="oZK-8O-XaR"/>
+                <constraint firstItem="zoO-DN-j5G" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zaC-eu-Tqk"/>
+                <constraint firstItem="FxR-dB-pyT" firstAttribute="trailing" secondItem="QlR-7h-4H9" secondAttribute="trailing" id="zd1-SN-tbC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backgroundImageView" destination="QlR-7h-4H9" id="MEt-Ff-K27"/>
+                <outlet property="imageView" destination="zoO-DN-j5G" id="lR5-Zy-l9J"/>
+                <outlet property="labelDesc" destination="FxR-dB-pyT" id="dVA-2a-KqI"/>
+                <outlet property="labelTitle" destination="Byj-B9-ChP" id="1Jw-bh-NLO"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </view>
+        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="JvC-sL-ICC">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        </imageView>
+    </objects>
+    <resources>
+        <image name="background" width="414" height="387"/>
+    </resources>
+</document>
