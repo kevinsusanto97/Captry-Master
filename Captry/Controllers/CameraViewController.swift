@@ -27,12 +27,22 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     var isGridShowen = true
     var isUsingFlash = false
     
+    var orientationLock = UIInterfaceOrientationMask.all
+    
     @IBOutlet var cameraView: UIView!
     
     @IBOutlet var gridView: UIImageView!
     
     @IBAction func takePhoto(_ sender: Any) {
         takePhoto = true
+    }
+    
+    @IBAction func goBack(_ sender: Any){
+        performSegue(withIdentifier: "backToCourseSegue", sender: self)
+    }
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return self.orientationLock
     }
     
     
@@ -112,6 +122,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.landscape)
         prepareCamera()
     }
     
@@ -310,8 +321,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             print("Device tourch Flash Error ");
         }
     }
-    
-
     /*
     // MARK: - Navigation
 
@@ -323,3 +332,4 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     */
 
 }
+

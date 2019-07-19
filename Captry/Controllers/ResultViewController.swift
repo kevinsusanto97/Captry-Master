@@ -21,6 +21,10 @@ class ResultViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        AppUtility.lockOrientation(.landscape)
+    }
     
     @IBAction func savePhoto(_ sender: Any) {
         guard let selectedImage = previewResult.image else {
