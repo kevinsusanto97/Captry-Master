@@ -16,46 +16,49 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="QlR-7h-4H9">
-                    <rect key="frame" x="0.0" y="509" width="414" height="387"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="QlR-7h-4H9">
+                    <rect key="frame" x="0.0" y="439" width="414" height="457"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zoO-DN-j5G">
-                    <rect key="frame" x="0.0" y="43" width="414" height="624"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zoO-DN-j5G">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
                 </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Winnie the Pooh" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byj-B9-ChP" userLabel="Title">
-                    <rect key="frame" x="22" y="694" width="375" height="38"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Winnie the Pooh" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byj-B9-ChP" userLabel="Title">
+                    <rect key="frame" x="0.0" y="629" width="414" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="38" id="aot-t0-xDk"/>
-                    </constraints>
                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="32"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Use this technique to make your slides, create your app, in a simple and effective way " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FxR-dB-pyT" userLabel="Description">
-                    <rect key="frame" x="0.0" y="748" width="414" height="94"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Use this technique to make your slides, create your app, in a simple and effective way " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FxR-dB-pyT" userLabel="Description">
+                    <rect key="frame" x="23" y="681" width="369" height="58"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name=".SFNSText" family=".SF NS Text" pointSize="17"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCW-CP-KHu" customClass="RoundedButton" customModule="Captry" customModuleProvider="target">
+                    <rect key="frame" x="80" y="757" width="254" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Start Now!">
+                        <color key="titleColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Byj-B9-ChP" secondAttribute="trailing" constant="17" id="0sB-uv-l52"/>
                 <constraint firstItem="QlR-7h-4H9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="308-qm-OcN"/>
-                <constraint firstAttribute="bottom" secondItem="Byj-B9-ChP" secondAttribute="bottom" constant="164" id="9ey-tP-QOP"/>
                 <constraint firstAttribute="bottom" secondItem="QlR-7h-4H9" secondAttribute="bottom" id="EjV-5L-gWp"/>
-                <constraint firstItem="FxR-dB-pyT" firstAttribute="leading" secondItem="QlR-7h-4H9" secondAttribute="leading" id="KuU-Qe-Bv8"/>
-                <constraint firstAttribute="trailing" secondItem="zoO-DN-j5G" secondAttribute="trailing" id="Peu-l0-zgO"/>
-                <constraint firstItem="Byj-B9-ChP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="22" id="XAJ-L9-p23"/>
-                <constraint firstItem="FxR-dB-pyT" firstAttribute="top" secondItem="Byj-B9-ChP" secondAttribute="bottom" constant="16" id="XlK-Sh-rPL"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FxR-dB-pyT" secondAttribute="bottom" constant="20" id="eXw-DJ-KZP"/>
                 <constraint firstAttribute="trailing" secondItem="QlR-7h-4H9" secondAttribute="trailing" id="jpl-5i-YcJ"/>
                 <constraint firstItem="zoO-DN-j5G" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="43" id="mB7-um-uzm"/>
-                <constraint firstItem="Byj-B9-ChP" firstAttribute="top" secondItem="zoO-DN-j5G" secondAttribute="bottom" constant="27" id="oZK-8O-XaR"/>
                 <constraint firstItem="zoO-DN-j5G" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zaC-eu-Tqk"/>
-                <constraint firstItem="FxR-dB-pyT" firstAttribute="trailing" secondItem="QlR-7h-4H9" secondAttribute="trailing" id="zd1-SN-tbC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
