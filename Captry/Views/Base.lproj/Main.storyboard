@@ -500,15 +500,11 @@
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="2ph-pg-Nqv">
                                 <rect key="frame" x="0.0" y="825" width="414" height="37"/>
-                                <color key="pageIndicatorTintColor" red="0.31764705879999999" green="0.21176470589999999" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.31764705879999999" green="0.21176470589999999" blue="0.56078431370000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caW-bw-P8r">
-                                <rect key="frame" x="0.0" y="44" width="414" height="844"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="26M-78-Igl"/>
-                                    <constraint firstAttribute="height" constant="896" id="buU-yi-CgD"/>
-                                </constraints>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caW-bw-P8r">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQs-Ab-Xkx">
                                 <rect key="frame" x="364" y="44" width="30" height="30"/>
@@ -523,13 +519,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="caW-bw-P8r" firstAttribute="trailing" secondItem="714-JS-Dfd" secondAttribute="trailing" id="27Q-8J-PQx"/>
+                            <constraint firstItem="caW-bw-P8r" firstAttribute="centerX" secondItem="714-JS-Dfd" secondAttribute="centerX" id="1nP-Wi-2nH"/>
                             <constraint firstItem="2ph-pg-Nqv" firstAttribute="leading" secondItem="714-JS-Dfd" secondAttribute="leading" id="3zo-BV-lOV"/>
-                            <constraint firstItem="caW-bw-P8r" firstAttribute="leading" secondItem="714-JS-Dfd" secondAttribute="leading" id="KCE-oS-6WO"/>
-                            <constraint firstAttribute="bottom" secondItem="caW-bw-P8r" secondAttribute="bottom" id="VVx-c0-PB0"/>
+                            <constraint firstItem="caW-bw-P8r" firstAttribute="height" secondItem="gqA-yF-82l" secondAttribute="height" id="8hB-eb-ZYF"/>
                             <constraint firstItem="714-JS-Dfd" firstAttribute="trailing" secondItem="2ph-pg-Nqv" secondAttribute="trailing" id="fDq-AV-G1b"/>
+                            <constraint firstItem="caW-bw-P8r" firstAttribute="centerY" secondItem="714-JS-Dfd" secondAttribute="centerY" id="gN9-Ll-O9T"/>
+                            <constraint firstItem="caW-bw-P8r" firstAttribute="width" secondItem="gqA-yF-82l" secondAttribute="width" id="ivf-XU-knU"/>
                             <constraint firstItem="714-JS-Dfd" firstAttribute="bottom" secondItem="2ph-pg-Nqv" secondAttribute="bottom" id="vE3-ur-cix"/>
-                            <constraint firstItem="caW-bw-P8r" firstAttribute="top" secondItem="gqA-yF-82l" secondAttribute="top" id="zo5-F9-OyK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="714-JS-Dfd"/>
                     </view>
