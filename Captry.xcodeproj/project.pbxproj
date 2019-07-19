@@ -133,6 +133,7 @@
 				5179B4D922D857C200C35257 /* Main.storyboard */,
 				51363A7622DF0E3E00E63D3B /* CustomUI.swift */,
 				517EF9F622DC87A40014CE6C /* CollectionViewCell.swift */,
+				EF1FE5E022DF2272003C31D1 /* ReferencesCollectionViewCell.swift */,
 				B0E076E522DF1524004D391D /* RoundedButton.swift */,
 				D476D7C322E070DE00E5221F /* Slide.swift */,
 				D49F765F22E1719F0098EC05 /* SlideNew.xib */,
@@ -148,7 +149,6 @@
 				B0CF518522DC66530090A1A6 /* CameraViewController.swift */,
 				B0CF518722DC667B0090A1A6 /* ResultViewController.swift */,
 				EF1FE5DE22DF2164003C31D1 /* ReferencesViewController.swift */,
-				EF1FE5E022DF2272003C31D1 /* ReferencesCollectionViewCell.swift */,
 				D476D7BF22E06B3E00E5221F /* OnBoardingViewController.swift */,
 			);
 			path = Controllers;

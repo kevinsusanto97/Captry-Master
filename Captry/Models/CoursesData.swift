@@ -16,7 +16,7 @@ class CoursesData
     let ruleOfThirdImage: String = "courseList1"
     let ruleOfThirdGrid: String = "RuleOfThirdGrid"
     let ruleOfThirdReferences1: String = "courseList1"
-    let ruleOfThirdReferences2: String = "courseList1"
+    let ruleOfThirdReferences2: String = "courseList2"
     let ruleOfThirdReferences3: String = "courseList1"
     let ruleOfThirdReferences4: String = "courseList1"
     
