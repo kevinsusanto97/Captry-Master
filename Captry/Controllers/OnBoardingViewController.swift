@@ -10,6 +10,7 @@ import UIKit
 
 class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var startButton: RoundedButton!
     
     @IBOutlet weak var scrollView: UIScrollView!{
         didSet{
@@ -30,7 +31,7 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         pageControl.numberOfPages = slides.count
         pageControl.currentPage = 0 
         view.bringSubviewToFront(pageControl)
-        print()
+        startButton.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -73,7 +74,6 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    
     /*
      * default function called when view is scolled. In order to enable callback
      * when scrollview is scrolled, the below code needs to be called:
@@ -105,36 +105,29 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
          */
         let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
         
-        if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
-            slides[0].imageView.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
-            slides[1].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.25, y: percentOffset.x/0.25)
-        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
-            slides[1].imageView.transform = CGAffineTransform(scaleX: (0.50+percentOffset.x), y: (0.50+percentOffset.x))
-            slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
+        if(percentOffset.x > 0 && percentOffset.x <= 0.5) {
+            slides[0].imageView.transform = CGAffineTransform(scaleX: (0.5-percentOffset.x)/0.5, y: (0.5-percentOffset.x)/0.5)
+            slides[1].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.5, y: percentOffset.x/0.5)
             skipButton.setTitle("Skip", for: UIControl.State.normal)
             skipButton.frame = CGRect(x: 364, y: 44, width: 30, height: 30)
-        } else if(percentOffset.x > 0.50 && percentOffset.x <= 1) {
+        } else if(percentOffset.x > 0.5 && percentOffset.x <= 1) {
             skipButton.setTitle("Let's Start", for: UIControl.State.normal)
             skipButton.frame = CGRect(x: 304, y: 44, width: 90, height: 30)
-            slides[2].imageView.transform = CGAffineTransform(scaleX: (0.5+percentOffset.x), y: (0.5+percentOffset.x))
+            slides[1].imageView.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.5, y: (1-percentOffset.x)/0.5)
+            slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
+            startButton.isHidden = true
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.startButton.alpha = 0
+            })
+            if (percentOffset.x > 0.9 && percentOffset.x <= 1) {
+                startButton.isHidden = false
+                
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.startButton.alpha = 1.0
+                })
+            }
         }
-        
-        
-//        if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
-//            slides[0].imageView.transform = CGAffineTransform(scaleX: (0.5-percentOffset.x)/0.5, y: (0.5-percentOffset.x)/0.5)
-//            slides[1].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.5, y: percentOffset.x/0.5)
-//        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
-//            slides[1].imageView.transform = CGAffineTransform(scaleX: (0.50-percentOffset.x)/0.25, y: (0.50-percentOffset.x)/0.25)
-//            slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
-//
-//        } else if(percentOffset.x > 0.50 && percentOffset.x <= 0.75) {
-//            slides[2].imageView.transform = CGAffineTransform(scaleX: (0.75-percentOffset.x)/0.25, y: (0.75-percentOffset.x)/0.25)
-//            slides[3].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.75, y: percentOffset.x/0.75)
-//
-//        } else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
-//            slides[3].imageView.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
-//            slides[4].imageView.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
-//        }
     }
     
     
