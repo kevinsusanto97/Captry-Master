@@ -242,10 +242,8 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="dimView" destination="NSD-8e-DU7" id="mCv-AE-O9c"/>
-                        <outlet property="guidesCollectionView" destination="akw-KR-clq" id="eir-hB-75W"/>
                         <outlet property="overviewContent" destination="KCi-Ln-x1X" id="jYa-Sn-PS7"/>
                         <outlet property="overviewLabel" destination="5VM-fm-ECK" id="x9M-iU-3RY"/>
-                        <outlet property="pageControlGuides" destination="LNI-Bn-1ZC" id="RwF-3z-7Bt"/>
                         <outlet property="playerView" destination="uAY-G1-QaR" id="LKC-yG-dMh"/>
                         <outlet property="popupView" destination="hFx-bP-xc8" id="Fj9-bc-C4P"/>
                         <outlet property="referencesImage" destination="1Fg-Av-7Eb" id="uQQ-ob-f07"/>
@@ -312,10 +310,6 @@
                                     </view>
                                 </collectionViewCell>
                             </cells>
-                            <connections>
-                                <outlet property="dataSource" destination="Dfj-Ca-i5p" id="O0t-lG-DZp"/>
-                                <outlet property="delegate" destination="Dfj-Ca-i5p" id="UlV-rm-QJT"/>
-                            </connections>
                         </collectionView>
                         <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LNI-Bn-1ZC">
                             <rect key="frame" x="0.0" y="463" width="350" height="37"/>
