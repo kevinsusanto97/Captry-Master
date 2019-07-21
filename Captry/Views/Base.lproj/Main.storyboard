@@ -73,18 +73,18 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YqH-Q8-HVW">
-                                <rect key="frame" x="17" y="0.0" width="379" height="176"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello good people!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShB-q6-Tvc">
-                                        <rect key="frame" x="0.0" y="73" width="379" height="41"/>
+                                        <rect key="frame" x="0.0" y="69" width="414" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
                                         <color key="textColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What would you like to learn today?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkV-a2-h91">
-                                        <rect key="frame" x="0.0" y="112" width="379" height="21"/>
+                                        <rect key="frame" x="0.0" y="112" width="414" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,7 +112,7 @@
         <!--Course Detail View Controller-->
         <scene sceneID="g6N-Jf-fND">
             <objects>
-                <viewController id="Dfj-Ca-i5p" customClass="CourseDetailViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="Dfj-Ca-i5p" customClass="CourseDetailViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fsc-Az-JPQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,7 +199,7 @@
                                                 <state key="normal" title="Practice Now"/>
                                                 <connections>
                                                     <action selector="goToPractice:" destination="Dfj-Ca-i5p" eventType="touchUpInside" id="4ml-7Q-i1t"/>
-                                                    <segue destination="Ujc-gz-Tyr" kind="presentation" identifier="practiceSegue" id="V56-XB-Y8h"/>
+                                                    <segue destination="Ujc-gz-Tyr" kind="presentation" identifier="practiceSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="V56-XB-Y8h"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -238,6 +238,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mqa-g5-wvV"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="dimView" destination="NSD-8e-DU7" id="mCv-AE-O9c"/>
@@ -281,7 +282,7 @@
             <objects>
                 <viewController id="Ujc-gz-Tyr" customClass="CameraViewController" customModule="Captry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pxz-HN-KUP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ysi-A0-xuG">
@@ -330,7 +331,7 @@
                                     <color key="titleColor" red="1" green="0.28062454380000001" blue="0.0" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Dfj-Ca-i5p" kind="presentation" id="gVx-nG-LWA"/>
+                                    <segue destination="Dfj-Ca-i5p" kind="presentation" modalTransitionStyle="coverVertical" id="gVx-nG-LWA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k43-Uf-Yif">
@@ -345,6 +346,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xaN-OV-i6k"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="cameraView" destination="Ysi-A0-xuG" id="VSh-e6-ZzW"/>
                         <outlet property="flashOutlet" destination="k43-Uf-Yif" id="Ytd-1k-9Lc"/>
@@ -569,6 +572,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="8QW-wr-yAn"/>
         <segue reference="V56-XB-Y8h"/>
-        <segue reference="Clx-ls-Huk"/>
+        <segue reference="gVx-nG-LWA"/>
     </inferredMetricsTieBreakers>
 </document>
