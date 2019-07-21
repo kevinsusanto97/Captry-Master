@@ -30,11 +30,10 @@ class CourseDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         navigationItem.title = temp
 //        overviewContent.text = ""
-        changeView()
-//        changeLabel()
-//        changeVideo()
-//        addImageToImageView()
-        popupView.layer.cornerRadius = 10
+        changeLabel()
+        changeVideo()
+        addImageToImageView()
+        popupView.layer.cornerRadius = 20
         maskVideo()
         
     

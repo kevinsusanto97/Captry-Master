@@ -508,32 +508,36 @@
                                 <rect key="frame" x="0.0" y="93" width="414" height="803"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="I0b-Uf-DWX">
-                                    <size key="itemSize" width="349" height="250"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="I0b-Uf-DWX">
+                                    <size key="itemSize" width="369" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="20"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="IN1-rS-X4z" customClass="ReferencesCollectionViewCell" customModule="Captry" customModuleProvider="target">
-                                        <rect key="frame" x="32.5" y="10" width="349" height="250"/>
+                                        <rect key="frame" x="22.5" y="30" width="369" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="349" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5kO-5M-wFa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="250"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="369" height="250"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <size key="customSize" width="349" height="250"/>
+                                        <size key="customSize" width="369" height="250"/>
                                         <connections>
                                             <outlet property="imageReferences" destination="5kO-5M-wFa" id="mB9-2X-Cdz"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="J6G-63-loS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="aUl-ax-vJG" id="S64-aq-5XH"/>
                                     <outlet property="delegate" destination="aUl-ax-vJG" id="YxE-RN-BdO"/>
@@ -546,7 +550,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Hh-lL-zaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="664" y="-863"/>
+            <point key="canvasLocation" x="663.768115942029" y="-863.16964285714278"/>
         </scene>
         <!--Onboarding Screen-->
         <scene sceneID="IhK-4N-2U4">
@@ -627,6 +631,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="8QW-wr-yAn"/>
         <segue reference="V56-XB-Y8h"/>
-        <segue reference="gVx-nG-LWA"/>
+        <segue reference="Clx-ls-Huk"/>
     </inferredMetricsTieBreakers>
 </document>
