@@ -56,9 +56,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func titleStyle() {
-        titleBox.layer.cornerRadius = 10
-        titleBox.layer.shadowOpacity = 0.5
-        titleBox.layer.shadowRadius = 20
+        titleBox.layer.shadowOpacity = 0.3
+        titleBox.layer.shadowRadius = 30
     }
     
     
