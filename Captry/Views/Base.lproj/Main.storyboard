@@ -251,7 +251,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2IW-GR-dZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="hFx-bP-xc8">
+                <view contentMode="scaleToFill" id="hFx-bP-xc8" customClass="GuidesViewController" customModule="Captry" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="350" height="605"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -269,9 +269,23 @@
                                 <action selector="closePopUpBtn:" destination="Dfj-Ca-i5p" eventType="touchUpInside" id="zLY-a9-Y73"/>
                             </connections>
                         </button>
+                        <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="gX6-7f-y1c">
+                            <rect key="frame" x="16" y="450" width="318" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="pageIndicatorTintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </pageControl>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cE0-qY-5OD">
+                            <rect key="frame" x="0.0" y="102" width="350" height="401"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </scrollView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <viewLayoutGuide key="safeArea" id="GHD-fk-jcV"/>
+                    <connections>
+                        <outlet property="pageControlGuides" destination="gX6-7f-y1c" id="euR-Lh-LbB"/>
+                        <outlet property="scrollViewGuides" destination="cE0-qY-5OD" id="9ba-c3-afs"/>
+                    </connections>
                 </view>
             </objects>
             <point key="canvasLocation" x="1750.7246376811595" y="-15.401785714285714"/>

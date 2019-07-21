@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4EB5224922DDFC910055D451 /* CoursesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5224822DDFC910055D451 /* CoursesData.swift */; };
 		51363A7722DF0E3E00E63D3B /* CustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51363A7622DF0E3E00E63D3B /* CustomUI.swift */; };
+		51363A7922E4855900E63D3B /* GuidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51363A7822E4855900E63D3B /* GuidesViewController.swift */; };
 		5179B4D622D857C200C35257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179B4D522D857C200C35257 /* AppDelegate.swift */; };
 		5179B4D822D857C200C35257 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179B4D722D857C200C35257 /* ViewController.swift */; };
 		5179B4DB22D857C200C35257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5179B4D922D857C200C35257 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		3B0CC4DA33EE4EBB2C2BDB57 /* Pods-Captry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Captry.debug.xcconfig"; path = "Target Support Files/Pods-Captry/Pods-Captry.debug.xcconfig"; sourceTree = "<group>"; };
 		4EB5224822DDFC910055D451 /* CoursesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesData.swift; sourceTree = "<group>"; };
 		51363A7622DF0E3E00E63D3B /* CustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUI.swift; sourceTree = "<group>"; };
+		51363A7822E4855900E63D3B /* GuidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidesViewController.swift; sourceTree = "<group>"; };
 		5179B4D222D857C200C35257 /* Captry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Captry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5179B4D522D857C200C35257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5179B4D722D857C200C35257 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				EF1FE5DE22DF2164003C31D1 /* ReferencesViewController.swift */,
 				EF1FE5E022DF2272003C31D1 /* ReferencesCollectionViewCell.swift */,
 				D476D7BF22E06B3E00E5221F /* OnBoardingViewController.swift */,
+				51363A7822E4855900E63D3B /* GuidesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				51363A7722DF0E3E00E63D3B /* CustomUI.swift in Sources */,
 				B0CF518822DC667B0090A1A6 /* ResultViewController.swift in Sources */,
 				EF1FE5DF22DF2164003C31D1 /* ReferencesViewController.swift in Sources */,
+				51363A7922E4855900E63D3B /* GuidesViewController.swift in Sources */,
 				517EF9F722DC87A40014CE6C /* CollectionViewCell.swift in Sources */,
 				5179B4D822D857C200C35257 /* ViewController.swift in Sources */,
 				B0E076E622DF1524004D391D /* RoundedButton.swift in Sources */,
