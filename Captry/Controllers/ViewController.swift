@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     let courseName = ["Rule of Thirds","Symetry","Triangle Ratio", "Golden Ratio"]
-    let courseThumb = [UIImage(named: "courseList1"),UIImage(named: "courseList2"),UIImage(named: "CourseList3"),UIImage(named: "courseList4")]
+    let courseThumb = [UIImage(named: "courseList1"),UIImage(named: "courseList2"),UIImage(named: "courseList3"),UIImage(named: "courseList4")]
     var selectedCourse: String = ""
     
     @IBOutlet var titleBox: UIView!
@@ -56,9 +56,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func titleStyle() {
-        titleBox.layer.cornerRadius = 10
-        titleBox.layer.shadowOpacity = 0.5
-        titleBox.layer.shadowRadius = 20
+        titleBox.layer.shadowOpacity = 0.3
+        titleBox.layer.shadowRadius = 30
     }
     
     
