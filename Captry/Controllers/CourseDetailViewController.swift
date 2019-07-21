@@ -11,10 +11,7 @@ import AVKit
 import YoutubePlayer_in_WKWebView
 
 class CourseDetailViewController: UIViewController {
-    @IBOutlet var pageControlGuides: UIPageControl!
-    @IBOutlet var guidesCollectionView: UICollectionView!
-    
-    @IBOutlet var titlePopup: UILabel!
+   
     @IBOutlet var popupView: UIView!
     @IBOutlet var dimView: UIView!
     
