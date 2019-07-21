@@ -32,7 +32,7 @@ class CourseDetailViewController: UIViewController {
         changeLabel()
         changeVideo()
         addImageToImageView()
-        popupView.layer.cornerRadius = 10
+        popupView.layer.cornerRadius = 20
         maskVideo()
         
     
