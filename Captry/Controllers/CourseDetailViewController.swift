@@ -11,12 +11,12 @@ import AVKit
 import YoutubePlayer_in_WKWebView
 
 class CourseDetailViewController: UIViewController {
-
+    @IBOutlet var pageControlGuides: UIPageControl!
+    @IBOutlet var guidesCollectionView: UICollectionView!
+    
     @IBOutlet var titlePopup: UILabel!
     @IBOutlet var popupView: UIView!
     @IBOutlet var dimView: UIView!
-    
-    
     
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var overviewContent: UILabel!
@@ -37,6 +37,10 @@ class CourseDetailViewController: UIViewController {
         addImageToImageView()
         popupView.layer.cornerRadius = 10
         maskVideo()
+        
+    
+        
+        
     }
     
     @IBAction func goToPractice(_ sender: Any) {
