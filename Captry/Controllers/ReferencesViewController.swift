@@ -23,7 +23,7 @@ class ReferencesViewController: UIViewController, UICollectionViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = course
+        navigationItem.title = "References"
         changeReferencesView()
         print(course)
     }

@@ -48,6 +48,29 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         cameraView.addGestureRecognizer(pinchGesture)
     }
     
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        prepareCamera()
+//        CoursesData.lockOrientation(.portrait)
+        // Or to rotate and lock
+        // AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        
+        // Don't forget to reset when view is being removed
+//        CoursesData.lockOrientation(.all)
+    }
+    
+//    override var shouldAutorotate: Bool
+//    {
+//        return false
+//    }
+    
     func loadGrid()
     {
         var listGrid = courseData.ruleOfThirdGrid
@@ -119,10 +142,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        prepareCamera()
-    }
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//        prepareCamera()
+//    }
+//
     //func pinch
     @objc func pinch(sender:UIPinchGestureRecognizer){
         guard let device = captureDevice else { return }

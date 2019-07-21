@@ -6,7 +6,7 @@
 //  Copyright © 2019 Kevin Susanto. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class CoursesData
 {
@@ -21,7 +21,7 @@ class CoursesData
     let ruleOfThirdReferences4: String = "courseList1"
     
     //All about Symetry Data
-    let symetryOverview: String = "Dalam video ini kamu akan belajar tentang Symetry yaitu teknik komposisi yang membagi frame menjadi dua sisi sama rata kiri-kanan atau atas-bawah kemudian menempatkan objek di sepanjang garis ini."
+    let symetryOverview: String = "Dalam video ini kamu akan belajar tentang Symmetry yaitu teknik komposisi yang membagi frame menjadi dua sisi sama rata kiri-kanan atau atas-bawah kemudian menempatkan objek di sepanjang garis ini."
     let symetryVideo: String = "c7Ii9o5HjpE"
     let symetryImage: String = "courseList2"
     let symetryGrid: String = "SymmetryGrid"
@@ -31,7 +31,7 @@ class CoursesData
     let symetryReferences4: String = "courseList2"
     
     //All about Golden Triangle Data
-    let goldenTriangleOverview: String = "Dalam video ini kamu akan belajar tentang Golden Triangle yaitu teknik komposisi yang membagi frame menjadi empat segitiga dengan dua ukuran berbeda kemudian menempatkan objek di sepanjang garis ini"
+    let goldenTriangleOverview: String = "Dalam video ini kamu akan belajar tentang Golden Triangle yaitu teknik komposisi yang membagi frame menjadi empat segitiga dengan dua ukuran berbeda kemudian menempatkan objek di sepanjang garis ini."
     let goldenTriangleVideo: String = "MRhp0WmXitM"
     let goldenTriangleImage: String = "courseList3"
     let goldenTriangleGrid: String = "GoldenTriangleGrid"
@@ -41,7 +41,7 @@ class CoursesData
     let goldenTriangleReferences4: String = "courseList3"
     
     //All about Golden Ratio Data
-    let goldenRatioOverview: String = "Dalam video ini kamu akan belajar tentang Golden Ratio yaitu teknik komposisi yang membagi frame menjadi 1:1.618 kemudian menempatkan objek di..."
+    let goldenRatioOverview: String = "Dalam video ini kamu akan belajar tentang Golden Ratio yaitu teknik komposisi yang membagi frame menjadi 1:1.6 atau 38/62 kemudian menempatkan objek di titik persimpangan dua garis horisontal"
     let goldenRatioVideo: String = "zO1jsOcfo0o"
     let goldenRatioImage: String = "courseList4"
     let goldenRatioGrid: String = "GoldenRatioGrid"
@@ -50,4 +50,23 @@ class CoursesData
     let goldenRatioReferences3: String = "courseList4"
     let goldenRatioReferences4: String = "courseList4"
     
+    //for lock orientation
+    static func lockOrientation(_ orientation: UIInterfaceOrientationMask)
+    {
+        
+        if let delegate = UIApplication.shared.delegate as? AppDelegate
+        {
+            delegate.orientationLock = orientation
+        }
+    }
+    
+    /// OPTIONAL Added method to adjust lock and rotate to the desired orientation
+    static func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation)
+    {
+        
+        self.lockOrientation(orientation)
+        
+        UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
+        UINavigationController.attemptRotationToDeviceOrientation()
+    }
 }
