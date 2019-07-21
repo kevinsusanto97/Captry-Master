@@ -10,11 +10,12 @@ import UIKit
 
 class GuidesViewController: UIView {
 
-    @IBOutlet var scrollViewGuides: UIScrollView!
-    @IBOutlet var pageControlGuides: UIPageControl!
-    
-    
-    
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
+
 }
-
-
