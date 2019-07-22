@@ -384,7 +384,7 @@
                                     <color key="titleColor" red="1" green="0.28062454380000001" blue="0.0" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Dfj-Ca-i5p" kind="presentation" modalTransitionStyle="coverVertical" id="gVx-nG-LWA"/>
+                                    <segue destination="4lc-bM-PRc" kind="unwind" unwindAction="unwindToCourseDetail:" id="50c-HE-bzC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k43-Uf-Yif">
@@ -631,6 +631,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="8QW-wr-yAn"/>
         <segue reference="V56-XB-Y8h"/>
-        <segue reference="Clx-ls-Huk"/>
     </inferredMetricsTieBreakers>
 </document>

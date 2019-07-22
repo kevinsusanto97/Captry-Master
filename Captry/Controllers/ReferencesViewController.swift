@@ -25,7 +25,7 @@ class ReferencesViewController: UIViewController, UICollectionViewDataSource, UI
         super.viewDidLoad()
         navigationItem.title = "References"
         changeReferencesView()
-        print(course)
+        //print(course)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
