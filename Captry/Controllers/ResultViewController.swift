@@ -30,6 +30,25 @@ class ResultViewController: UIViewController {
             return
         }
         UIImageWriteToSavedPhotosAlbum(selectedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        
+        let alert = UIAlertController(title: "Successfully Saved", message: "Your photo was saved to camera roll", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler: {
+            action in
+            switch action.style{
+            case .default:
+                self.performSegue(withIdentifier: "goToHomeFromResultSegue", sender: self)
+                break
+            case .cancel:
+                break
+            case .destructive:
+                break
+            @unknown default:
+                break
+            }
+        }
+        )
+        )
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {

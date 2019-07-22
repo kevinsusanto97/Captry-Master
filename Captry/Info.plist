@@ -15,11 +15,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>we can</string>
+	<string>We need your permission</string>
 	<key>NSCameraUsageDescription</key>
-	<string>we can</string>
+	<string>We need your permission</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>we can</string>
+	<string>We need your permission</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
