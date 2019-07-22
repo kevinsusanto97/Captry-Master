@@ -13,12 +13,14 @@ class ResultViewController: UIViewController {
     var takenPhoto: UIImage?
     
     @IBOutlet var previewResult: UIImageView!
+    @IBOutlet weak var previewSample: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let availableImage = takenPhoto {
             previewResult.image = UIImage(cgImage: availableImage.cgImage!, scale: availableImage.scale, orientation: .up)
         }
+        
     }
     
     

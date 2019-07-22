@@ -12,6 +12,7 @@ import AVFoundation
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     let captureSession = AVCaptureSession()
+    var courseData = CoursesData()
     var temp : String?
     
     @IBOutlet var focusRect: UIImageView!
@@ -47,23 +48,53 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         cameraView.addGestureRecognizer(pinchGesture)
     }
     
-    func loadGrid(){
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        prepareCamera()
+//        CoursesData.lockOrientation(.portrait)
+        // Or to rotate and lock
+        // AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        
+        // Don't forget to reset when view is being removed
+//        CoursesData.lockOrientation(.all)
+    }
+    
+//    override var shouldAutorotate: Bool
+//    {
+//        return false
+//    }
+    
+    func loadGrid()
+    {
+        var listGrid = courseData.ruleOfThirdGrid
         if temp == "Rule of Thirds"
         {
-            gridView.image = UIImage(named: "RuleOfThirdGrid")
+            //            gridView.image = UIImage(named: "RuleOfThirdGrid")
         }
         else if temp == "Symetry"
         {
-            gridView.image = UIImage(named: "SymmetryGrid")
+            listGrid = courseData.symetryGrid
+            //            gridView.image = UIImage(named: "SymmetryGrid")
         }
         else if temp == "Triangle Ratio"
         {
-            gridView.image = UIImage(named: "GoldenTriangleGrid")
+            listGrid = courseData.goldenTriangleGrid
+            //            gridView.image = UIImage(named: "GoldenTriangleGrid")
         }
         else if temp == "Golden Ratio"
         {
-            gridView.image = UIImage(named: "GoldenRatioGrid")
+            listGrid = courseData.goldenRatioGrid
+            //            gridView.image = UIImage(named: "GoldenRatioGrid")
         }
+        let yourGrid: UIImage = UIImage(named: listGrid)!
+        gridView.image = yourGrid
     }
     
     @objc func focus(sender:UITapGestureRecognizer){
@@ -111,10 +142,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        prepareCamera()
-    }
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//        prepareCamera()
+//    }
+//
     //func pinch
     @objc func pinch(sender:UIPinchGestureRecognizer){
         guard let device = captureDevice else { return }
