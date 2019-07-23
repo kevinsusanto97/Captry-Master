@@ -63,11 +63,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //AppUtility.lockOrientation(.portrait)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
  
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        //AppUtility.lockOrientation(.all)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     

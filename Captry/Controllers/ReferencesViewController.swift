@@ -10,10 +10,10 @@ import UIKit
 
 class ReferencesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     // Dummy images references
-    var imageReferences = [UIImage(named: "courseList1"),
-                           UIImage(named: "courseList1"),
-                           UIImage(named: "courseList1"),
-                           UIImage(named: "courseList1")]
+    var imageReferences = [UIImage(named: "sample-1"),
+                           UIImage(named: "sample-2"),
+                           UIImage(named: "sample-3"),
+                           UIImage(named: "sample-4")]
     
     var course: String?
     
@@ -23,7 +23,7 @@ class ReferencesViewController: UIViewController, UICollectionViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "References"
+        navigationItem.title = "Highlighted"
         changeReferencesView()
         //print(course)
     }
