@@ -109,9 +109,10 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
             slides[0].imageView.transform = CGAffineTransform(scaleX: (0.5-percentOffset.x)/0.5, y: (0.5-percentOffset.x)/0.5)
             slides[1].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.5, y: percentOffset.x/0.5)
             skipButton.setTitle("Skip", for: UIControl.State.normal)
+            skipButton.isHidden = false
             skipButton.frame = CGRect(x: 364, y: 44, width: 30, height: 30)
         } else if(percentOffset.x > 0.5 && percentOffset.x <= 1) {
-            skipButton.setTitle("Let's Start", for: UIControl.State.normal)
+            skipButton.isHidden = true
             skipButton.frame = CGRect(x: 304, y: 44, width: 90, height: 30)
             slides[1].imageView.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.5, y: (1-percentOffset.x)/0.5)
             slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
